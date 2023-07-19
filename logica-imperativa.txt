@@ -1,0 +1,22 @@
+Nome do Algoritmo = cadastro
+
+Variáveis:
+nome (tipo CARACTERE)
+Ex.:
+nome = "Maria"
+
+cpf (tipo INTEIRO)
+Ex.:
+cpf = 00530149827
+
+rg (tipo INTEIRO)
+Ex.:
+rg = 3210282697
+
+altura (tipo REAL)
+Ex.:
+altura = 1.78
+
+endereco (tipo caractere)
+Ex.:
+endereco = "Av. Principal, 231, Centro - Salvador"
