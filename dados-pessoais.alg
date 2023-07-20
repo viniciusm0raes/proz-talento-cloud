@@ -2,11 +2,11 @@
 
 Algoritmo "dados-pessoais"
 
-Var
+var
 nome, endereco, cidade: caracter
 cpf, rg: inteiro
 
-Inicio
+inicio
 // Entrada dos dados
 Escreva("Digite seu nome: ")
 Leia(nome)
@@ -26,4 +26,4 @@ Escreval("Sua cidade é: ", cidade)
 Escreval("Seu CPF é: ", cpf)
 Escreval("E o seu RG é: ", rg)
 
-Fimalgoritmo
+fimalgoritmo
