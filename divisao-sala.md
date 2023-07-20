@@ -6,4 +6,4 @@ No entanto, as figuras demonstram que a filas, antes todas compostas por 4 que g
 2 de matemática ou 4 que gostam de matemática e 2 de português, passam a possuir 2 linhas em que 
 essa divisão fica em 3x3 de cada matéria. Dessa forma, se identifica que o(a) aluno(a) da **3ª coluna, 
 4ª fileira (linha)**, trocou de lugar com o(a) aluno(a) da **5ª coluna, 5ª fileira (linha)**. 
-Fazendo que as **duas últimas fileiras** passem a contar com 3 alunos(as) de cada disciplina.
+Fazendo que as **duas últimas fileiras** passem a contar com **3 alunos(as) de cada disciplina**.
