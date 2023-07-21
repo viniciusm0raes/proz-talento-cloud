@@ -18,12 +18,12 @@ inicio
 
    EscrevaL("==========================")
    Se (fumante = "s") ou (animais = "s") entao
-      EscrevaL("O cliente deve ser alocado na área externa.")
+      EscrevaL("O cliente deve ser alocado na ÁREA EXTERNA.")
    SeNao
    Se (totpessoas >= 5) entao
-      EscrevaL("Os clientes devem ser alocados no 1º andar.")
+      EscrevaL("Os clientes devem ser alocados no 1º ANDAR.")
    SeNao
-      EscrevaL("O(s) cliente(s) deve(m) ser alocado(s) no térreo.")
+      EscrevaL("O(s) cliente(s) deve(m) ser alocado(s) no TÉRREO.")
    Escreva("==========================")
    FimSe
    FimSe
