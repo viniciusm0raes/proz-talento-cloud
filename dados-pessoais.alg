@@ -1,29 +1,30 @@
-//Exemplo de código no VisualG
-
 Algoritmo "dados-pessoais"
 
 var
-nome, endereco, cidade: caracter
+nome, endereco, cidade: caractere
 cpf, rg: inteiro
 
 inicio
 // Entrada dos dados
-Escreva("Digite seu nome: ")
-Leia(nome)
-Escreva("Digite seu endereço: ")
-Leia(endereco)
-Escreva("Digite sua cidade: ")
-Leia(cidade)
-Escreva("Digite seu CPF: ")
-Leia(cpf)
-Escreva("Digite seu RG: ")
-Leia(rg)
+escreva("Digite seu nome: ")
+leia(nome)
+escreva("Digite seu endereço: ")
+leia(endereco)
+escreva("Digite sua cidade: ")
+leia(cidade)
+escreva("Digite seu CPF: ")
+leia(cpf)
+escreval("Digite seu RG: ")
+leia(rg)
 
 //Saida dos dados
-Escreval("Seu nome é: ", nome)
-Escreval("Seu endereço é: ", endereco)
-Escreval("Sua cidade é: ", cidade)
-Escreval("Seu CPF é: ", cpf)
-Escreval("E o seu RG é: ", rg)
+escreval("==============================")
+escreval("Seu nome é: ", nome)
+escreval("Seu endereço é: ", endereco)
+escreval("Sua cidade é: ", cidade)
+escreval("==============================")
+escreval("Seu CPF é: ", cpf)
+escreval("E o seu RG é: ", rg)
+escreval("==============================")
 
 fimalgoritmo
