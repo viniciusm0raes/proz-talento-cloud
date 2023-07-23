@@ -7,25 +7,25 @@ var
 
 inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
-   Escreva("O cliente é fumante? (digite apenas s ou n): ")
-   Leia(fumante)
-   Escreva("O cliente está acompanhado de algum animal de estimação? (digite apenas s ou n): ")
-   Leia(animais)
-   Escreva("Qual o total de pessoas? ")
-   Leia(totpessoas)
+   escreva("O cliente é fumante? (digite apenas s ou n): ")
+   leia(fumante)
+   escreva("O cliente está acompanhado de algum animal de estimação? (digite apenas s ou n): ")
+   leia(animais)
+   escreva("Qual o total de pessoas? ")
+   leia(totpessoas)
 
-//Processamento
+//processamento
 
-   EscrevaL("==========================")
-   Se (fumante = "s") ou (animais = "s") entao
-      EscrevaL("O cliente deve ser alocado na ÁREA EXTERNA.")
-   SeNao
-   Se (totpessoas >= 5) entao
-      EscrevaL("Os clientes devem ser alocados no 1º ANDAR.")
-   SeNao
-      EscrevaL("O(s) cliente(s) deve(m) ser alocado(s) no TÉRREO.")
-   Escreva("==========================")
-   FimSe
-   FimSe
+   escreval("==========================")
+   se (fumante = "s") ou (animais = "s") entao
+      escreval("O cliente deve ser alocado na ÁREA EXTERNA.")
+   senao
+   se (totpessoas >= 5) entao
+      escreval("Os clientes devem ser alocados no 1º ANDAR.")
+   senao
+      escreval("O(s) cliente(s) deve(m) ser alocado(s) no TÉRREO.")
+   escreva("==========================")
+   fimse
+   fimse
 
 fimalgoritmo
