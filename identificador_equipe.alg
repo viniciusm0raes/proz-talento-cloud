@@ -1,18 +1,18 @@
 Algoritmo "Identificador"
 
-Var
+var
 equipe: caractere
 integrantes: inteiro
 contador: inteiro
 
-Inicio
-EscrevaL ("Qual o nome da equipe? ")
-Leia (equipe)
-EscrevaL ("----------------------")
+inicio
+escreval ("Qual o nome da equipe? ")
+leia (equipe)
+escreval ("----------------------")
 contador <- 1
-Enquanto (contador <= 5) faca
-EscrevaL (equipe, " - ", contador)
+enquanto (contador <= 5) faca
+escreval (equipe, " - ", contador)
 contador <- contador + 1
-FimEnquanto
-EscrevaL ("----------------------")
-Fimalgoritmo
+fimenquanto
+escreval ("----------------------")
+fimalgoritmo
