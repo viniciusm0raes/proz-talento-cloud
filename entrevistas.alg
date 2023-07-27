@@ -11,7 +11,7 @@ quant, contador: inteiro
 
 Inicio
 
-Escreva("Quantas pessoas entrevistadas no dia? ")
+Escreval("Quantas pessoas entrevistadas no dia? ")
 Leia(quant)
 
 contador <- 1
