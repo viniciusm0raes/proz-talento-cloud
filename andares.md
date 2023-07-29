@@ -25,7 +25,7 @@ print("01")<br>
 print("---Chegamos ao térreo---")<br>
 ```
 _________________________________________________
-### Contagem com o laço de repetição While
+### Contagem com o laço de repetição WHILE
 _________________________________________________
 ```
 i = 20
