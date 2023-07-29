@@ -2,27 +2,27 @@ _________________________________________________
 ### Contagem SEM laços de repetição
 _________________________________________________
 ```
-print("--------Descendo--------")<br>
-print("20")<br>
-print("19")<br>
-print("18")<br>
-print("17")<br>
-print("16")<br>
-print("15")<br>
-print("14")<br>
-print("12")<br>
-print("11")<br>
-print("10")<br>
-print("09")<br>
-print("08")<br>
-print("07")<br>
-print("06")<br>
-print("05")<br>
-print("04")<br>
-print("03")<br>
-print("02")<br>
-print("01")<br>
-print("---Chegamos ao térreo---")<br>
+print("--------Descendo--------")
+print("20")
+print("19")
+print("18")
+print("17")
+print("16")
+print("15")
+print("14")
+print("12")
+print("11")
+print("10")
+print("09")
+print("08")
+print("07")
+print("06")
+print("05")
+print("04")
+print("03")
+print("02")
+print("01")
+print("---Chegamos ao térreo---")
 ```
 _________________________________________________
 ### Contagem com o laço de repetição WHILE
