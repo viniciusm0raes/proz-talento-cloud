@@ -9,7 +9,7 @@ def calculo(num1,num2,op):
     if op == 1:
         print("A soma de ", num1, "e", num2, " é: ", num1 + num2)
     elif op == 2:
-        print(num1, "subtraído de", num2, "resulta em: ", num1 - num2)
+        print(num1, "menos", num2, "resulta em: ", num1 - num2)
     elif op == 3:
         print(num1, "multiplicado por", num2, "é igual a:", num1 * num2)
     elif op == 4:
