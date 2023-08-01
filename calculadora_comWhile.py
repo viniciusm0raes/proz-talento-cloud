@@ -18,13 +18,17 @@ while(True):
     print("-----------------------------------")
 
     if op == 1:
-        print("A soma de", num1, "e", num2, "resulta em:", calcular(num1,num2,op))
+        resultado = f"{calcular(num1,num2,op):_.2f}".format(calcular(num1,num2,op)).replace(".",",").replace("_",".")
+        print("A soma de", num1, "e", num2, "resulta em:", resultado)
     elif op == 2:
-        print(num1, "menos", num2, "resulta em:", calcular(num1,num2,op))
+        resultado = f"{calcular(num1,num2,op):_.2f}".format(calcular(num1,num2,op)).replace(".",",").replace("_",".")
+        print(num1, "menos", num2, "resulta em:", resultado)
     elif op == 3:
-        print("A multiplicação de", num1, "por", num2, "resulta em:", calcular(num1,num2,op))
+        resultado = f"{calcular(num1,num2,op):_.2f}".format(calcular(num1,num2,op)).replace(".",",").replace("_",".")
+        print("A multiplicação de", num1, "por", num2, "resulta em:", resultado)
     elif op == 4:
-        print("A divisão de", num1, "por", num2, "resulta em:", calcular(num1,num2,op))
+        resultado = f"{calcular(num1,num2,op):_.2f}".format(calcular(num1,num2,op)).replace(".",",").replace("_",".")
+        print("A divisão de", num1, "por", num2, "resulta em:", resultado)
     elif (op == 0):
         print("Você saiu da calculadora.")
         break
