@@ -18,7 +18,7 @@ while(True):
     print("-----------------------------------")
 
     if op == 1:
-        print("A soma de", num1, "com", num2, "resulta em:", calcular(num1,num2,op))
+        print("A soma de", num1, "e", num2, "resulta em:", calcular(num1,num2,op))
     elif op == 2:
         print(num1, "menos", num2, "resulta em:", calcular(num1,num2,op))
     elif op == 3:
