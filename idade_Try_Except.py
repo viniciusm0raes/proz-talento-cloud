@@ -10,7 +10,7 @@ while(anoCorreto == False):
 			print("PARABÉNS!", nome, "\nVc completou",idade, "ano(s) de idade.")			
 	
 		else:
-			print("Revise o seu ano de nascimento.\nA informação digitada é invalida.")
+			print("Revise o seu ano de nascimento.\nDados válidos apenas no intervalo entre 1922 e 2021.")
 		
 	except:
 		print("A informação digitada é invalida.\nO ano precisa ser informado como um número INTEIRO.")
