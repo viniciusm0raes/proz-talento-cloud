@@ -83,3 +83,7 @@ footer{
 	display: flex;
 	padding: 13px;	
 }
+
+footer nav{
+	margin-right: 13px;
+}
