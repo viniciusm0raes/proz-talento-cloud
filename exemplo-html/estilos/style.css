@@ -84,6 +84,7 @@ footer{
 	padding: 13px;	
 }
 
-footer nav{
+footer nav{	
 	margin-right: 13px;
+	text-align: right;
 }
