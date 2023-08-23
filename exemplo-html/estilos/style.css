@@ -78,13 +78,3 @@ p{
 	padding: 8px;
 	text-align: justify;
 }
-
-footer{
-	display: flex;
-	padding: 13px;	
-}
-
-footer nav{	
-	margin-right: 13px;
-	text-align: right;
-}
