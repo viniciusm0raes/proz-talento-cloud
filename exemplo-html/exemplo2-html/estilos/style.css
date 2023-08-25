@@ -40,11 +40,15 @@ img{
 	margin: 8px 17px;	
 }
 
-h1, h3{
+h1, h2, h3{
 	margin: 8px 0px;
 	margin-bottom: 13px;
 	padding: 5px;
 	text-align: center;
+}
+
+h2{
+	background-color: rgb(138, 138, 138);
 }
 
 h3{
