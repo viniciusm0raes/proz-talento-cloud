@@ -4,5 +4,22 @@ h1{
 
 div{
 	background-color: rgb(221, 221, 221);
-	margin: 5px;
+	margin: 34px;
+	padding: 65px;
+	border: 8px solid #000;
+	font-size: 2em;
+}
+
+.caixa-do-meio{
+	padding-top: 13px;
+	padding-right: 20px;
+	padding-bottom: 35px;
+	padding-left: 20px;
+
+	margin-top: 26px;
+	margin-right: 113px;
+	margin-bottom: 13px;
+	margin-left: 35px;
+
+	border: 13px solid darkgoldenrod;
 }
