@@ -34,6 +34,7 @@
         
         section{
     		text-align: center;             
+            margin-bottom: 25px;
         }
     </style>
 </head>
@@ -41,6 +42,7 @@
 
     <div>
     <section> 
+        <section>
         <h2>Aula Formulários</h2>
         <form >
             <label for="nome">Nome:</label>
@@ -54,16 +56,16 @@
             <br>
             <label for="fone">Telefone:</label>
             <input type="tel" name="fone" id="fone">            
-    
-    <section>
+        </section>            
+        <section>
 			<h3>Nacionalidade</h3>            
             <input type="radio" name="nacionalidade" id="brasil" value="brasil">
             <label for="brasil">Brasileiro(a)</label>
             <input type="radio" name="nacionalidade" id="outro" value="outro">
             <label for="outro">Estrangeiro(a)</label>                   
-    </section>
+        </section>
 
-    <section>
+         <section>
 			<h3>Meio de transporte</h3>                
             <input type="checkbox" name="meio-transporte" id="pe" value="pe">
             <label for="pe">A pé</label>                               
@@ -71,10 +73,12 @@
             <label for="bicicleta">Bicicleta</label>                              
             <input type="checkbox" name="meio-transporte" id="carro" value="carro">
             <label for="carro">Carro</label> 	
-    </section>    
+        </section>   
+            
     		<button type="submit">Enviar</button>
         </form>            
-    </section>         
+            
+        </section>         
     </div>        		
 
 </body>
