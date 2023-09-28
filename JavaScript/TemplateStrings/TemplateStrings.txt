@@ -1,0 +1,9 @@
+Exemplo de TemplateStrings numa função:
+
+function operacoes(v1, v2){
+  return (`${v1} + ${v2} = ${v1+v2}
+  \n${v1} - ${v2} = ${v1-v2}
+  \n${v1} x ${v2} = ${v1*v2}
+  \n${v1} ÷ ${v2} = ${v1/v2}`)
+}
+console.log(operacoes(9,4))
