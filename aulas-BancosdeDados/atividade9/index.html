@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedure (SQL)</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+        h1{
+			font-size: clamp(2rem, 2.6vw, 2.3rem);
+		}
+		
+		h3{
+			font-size: clamp(1.5rem, 2vw, 1.7rem);
+			margin-bottom: 0.2rem;
+		}
+
+		p{
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 1.3rem;
+			padding: 0.5rem;
+			margin: 0;
+		}
+
+        #obs{
+            background-color: dimgray;
+            color: #fff;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin: 0;
+            border-radius: 0.8rem;
+            
+        }
+
+        span{
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+        }
+
+        code{            
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			color: darkgoldenrod;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+
+        #codigo{
+            margin: 2.6rem;
+            margin-left: 8vw;
+        }
+	</style>
+</head>
+<body>
+    <h1>Atividade da plataforma sobre Procedure (SQL)</h1>
+    <p>Uma empresa de vendas tem um banco de dados com informações sobre os seus produtos. Ela precisa criar um relatório que faça um levantamento diário da quantidade de produtos comprados por dia. Para ajudar a empresa, crie um procedure para agilizar esse processo.</p>
+
+    <span><strong>Ferramenta online utilizada</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>
+    
+    <div id="codigo">
+        <h3>Tabelas de exemplo para utilização de PROCEDURES</h3>
+        <h3>Criando uma tabela de produtos</h3>
+        <code><pre>
+            CREATE TABLE tb_produto(
+            id_produto SERIAL CONSTRAINT pk_id_prod NOT NULL PRIMARY KEY,
+            nome_produto VARCHAR(45) NULL,
+            preco DECIMAL(10,2) NULL
+            );
+        </code></pre>
+        <h3>Criando uma tabela de vendas</h3>
+        <code><pre>
+            CREATE TABLE tb_vendas(
+            id_venda SERIAL NOT NULL PRIMARY KEY,
+            data_venda DATE NOT NULL,
+            id_produto INT NOT NULL,
+            qtd INT NOT NULL
+            );
+        </code></pre>
+        <h3>Relacionando o id_produto na tabela tb_vendas, como chave estrangeira (FK) da tabela tb_produto</h3>
+        <code><pre>
+            ALTER TABLE tb_vendas
+            ADD CONSTRAINT id_produto_fk
+            FOREIGN KEY (id_produto) REFERENCES tb_produto(id_produto)
+            ON DELETE CASCADE;
+        </code></pre>
+        <h3>Inserindo dados na tabela tb_produto</h3>
+        <code><pre>
+            INSERT INTO tb_produto(nome_produto, preco)
+            VALUES
+                ('Monitor', 853.00),
+                ('Teclado', 71.00),
+                ('Gabinete', 353.35),
+                ('SSD 1tb', 299.99);
+        </code></pre>
+        
+        <h3>Iserindo dados na tabela tb_vendas</h3>
+        <code><pre>
+            INSERT INTO tb_vendas(id_produto, data_venda,qtd)
+            VALUES
+                (4,'2023-10-13',1),
+                (1,'2023-10-03',3),
+                (3,'2023-10-08',2),
+                (2,'2023-09-01',1),
+                (2,'2023-09-04',5),
+                (4,'2023-08-05',3),
+                (3,'2023-08-02',5),
+                (2,'2023-08-13',3),
+                (4,'2023-10-13',4),
+                (1,'2023-10-03',4),
+                (3,'2023-10-08',7),
+                (2,'2023-09-01',1),
+                (2,'2023-09-04',6),
+                (4,'2023-08-05',2),
+                (3,'2023-08-02',3),
+                (2,'2023-08-13',5);
+        </code></pre>
+        
+        <h3>Criando (ou substituindo) um PROCEDURE que faça os cálculos e os aloque em uma VIEW</h3>        
+        <code><pre>
+            CREATE OR REPLACE PROCEDURE relatorio_vendas_diarias()
+            LANGUAGE plpgsql
+            AS $$
+            BEGIN
+                CREATE OR REPLACE VIEW vw_vendas AS
+                SELECT
+                tb_vendas.data_venda,
+                    SUM(tb_produto.preco * tb_vendas.qtd) as valor_total_dia,
+                    SUM(tb_vendas.qtd) AS qtd_vendida
+                FROM
+                    tb_vendas
+                INNER JOIN
+                    tb_produto ON tb_produto.id_produto = tb_vendas.id_produto
+                GROUP BY
+                    tb_vendas.data_venda
+                ORDER BY
+                    tb_vendas.data_venda;
+            END;
+            $$;
+        </code></pre>
+
+        <p id="obs"><strong>Obs.</strong>: Uma view é um objeto que é formado por declarações SELECTs e retorna uma visualização de dados específica de uma ou mais tabelas de um banco de dados.</p>
+
+        <h3>Chamando o PROCEDURE criado</h3>
+        <code>
+            <pre>
+                CALL relatorio_vendas_diarias();
+            </pre>
+        </code>
+        <h3>Exibindo os dados calculados pelo PROCEDURE com o <u>valor total</u> e a <u>quantidade de produtos</u> vendidos <u>por dia</u></h3>
+        <code>
+            <pre>
+                SELECT * FROM vw_vendas;
+            </pre>
+        </code>
+    </div>   
+</body>
+</html>
