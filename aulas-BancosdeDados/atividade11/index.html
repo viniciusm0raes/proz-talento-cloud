@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integridade, Confiabilidade e Disponibilidade dos dados</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+        h1{
+			font-size: clamp(2rem, 2.6vw, 2.3rem);
+            text-align: center;
+		}
+		
+		h3{
+			font-size: clamp(1.5rem, 2vw, 1.7rem);
+			margin-bottom: 0.2rem;
+		}
+
+		p{
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 1.3rem;
+			padding: 0.5rem;
+			margin: 0;
+		}
+
+        .obs{
+            background-color: dimgray;
+            color: #fff;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin: 0;
+            border-radius: 0.8rem;            
+        }
+
+        h3.obs{
+            text-align: center;
+        }
+     
+        li{
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: left;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin-left: 8rem;
+        }
+	</style>
+</head>
+<body>
+    <h1>Atividade da plataforma sobre integridade, confiabilidade e disponibilidade dos dados</h1>
+    <p>Após uma varredura rápida no sistema de banco de dados de uma empresa de vendas, identificamos a necessidade de melhorar a segurança dessas informações. Por isso, será necessário desenvolver um novo banco para armazenar os dados mais importantes, como detalhes dos clientes, valores faturados diariamente e informações sobre os produtos, além de outros. Sendo assim, explique quais são os pilares da segurança de dados que devem ser seguidos para que o novo banco seja bem projetado e funcione corretamente.</p>
+ 
+    <h3 class="obs">Importância da segurança de dados</h3>
+      
+    <p>Bancos de dados reúnem informações do negócio. Tais informações descrevem a natureza e processos deste, além de sua saúde, projeções e perspectivas.</p>
+    <p>Como estes são acessados por colaboradores(as) e garantem o funcionamento dos processos, seu acesso deve ser protegido contra ameaças quer acidentais (internas) ou intencionais (externas).</p>
+    <p>Abaixo seguem as descrições dos <u>três pilares da segurança de dados</u> (integridade, confiabilidade  e disponibilidade), além das ações que visam sua proteção.</p>
+
+    <h3 class="obs">Integridade</h3>
+    
+    <p>A integridade se relaciona com a garantia de que as informações preservarão seu conteúdo e características originais. Isso se relaciona diretamente com o controle das alterações efetuadas no sistema, além da conservação de seu ciclo de vida (duração), fundamentado na origem, manutenção e seu descarte (destruição).</p>    
+        
+    <h3>Melhoria(s) na integridade dos dados</h3>  
+    <p>
+        Para reforçar a integridade de dados, é crucial a adoção de medidas e revisar a infraestrutura de de proteção dos dados. Abaixo algumas das possíveis medidas:
+    </p>
+
+    <ul style="list-style-type:disc;">
+    <li>definição de controles de acesso para colaboradores e demais usuários;</li>
+    <li>permissionamento de arquivos;</li>
+    <li>versionamento de arquivos que permitam identificação da autoria e/ou restauração em caso de alterações / exclusões indevidas, quer acidentais ou não;</li>
+    <li>implantação de métodos/sistemas de verificação que possam detectar quaisquer alterações nos dados que ocorram na rede ou em função de eventos ocorridos sem interação humana, como falhas de hardware, interferência eletromagnética, etc.;</li>
+    <li>uso de somas de verificação (checksum) que chequem a integridade dos dados transmitidos por canais com ruídos ou armazenados em meios diversos num determinado período;</li>
+    <li>rígida política de backups que permitam restauração dos dados alterados/excluídos, dentre outras ações.</li>
+    </ul>
+
+    <h3 class="obs">Confiabilidade</h3>
+        
+    <p>
+        A confiabilidade se refere a imposição de limites de acesso aos dados. Dessa forma, apenas usuários devidamente autorizados / verificados terão acesso aos dados, sendo restritos pela necessidade e possibilidade de inclusão, edição ou exclusão destes.        
+    </p>
+
+    <h3>Melhoria(s) na confiabilidade dos dados</h3>
+    <ul>
+        <li>adoção de medidas preventivas que definam acesso apenas para usuários autorizados. Acesso este, definido em níveis de hierarquia e real demanda. Limitados aos setores / áreas que os mesmos se relacionem (financeiro, RH, marketing, vendas, etc.);</li>
+        <li>organizar a hierarquia de acesso, categorizando os dados conforme critérios como, o potencial de impacto nos processos do negócio, em caso de vazamentos acidentais ou intencionais;</li>
+        <li>variando conforme o grau de confidencialidade dos dados, usuários(as) com acesso a dados mais críticos devem ser treinados / informados sobre a importância nos cuidados com acesso / manipulação das informações, além dos riscos que possíveis vazamentos possam acarretar;</li>
+        <li>conscientizar quem acessa os dados sobre a importância de seguimento dos procedimentos de segurança adequados. Informando sobre os riscos, por exemplo, da conexão de dispositivos externos à rede, o uso de senhas seguras e o não compartilhamento de informações críticas em locais públicos ou com baixa segurança virtual;</li>
+        <li>no campo da infraestrutura, sistemas para criptografia de dados, uso de dois fatores de autenticação, tokens de acesso, dentre outros são formas de ampliar ainda mais a confiabilidade dos dados envolvidos.</li>
+    </ul>
+
+    <h3 class="obs">Disponibilidade</h3>
+    <p>
+        A disponibilidade diz respeito à garantia da possibilidade de acesso para o uso previsto. Garantindo que usuários(as) autorizados(as) / verificados(as), terão acesso aos dados, sempre que demandarem.
+    </p>
+
+    <ul>
+        <li>adoção de processos de manutenção imediata de hardware, verificação / tratamento de conflitos quanto à compatibilidade de softwares;</li>
+        <li>atualização periódica dos sistemas utilizados, adequação na largura de banda conforme a demanda do negócio. Uso de links temporários que mantenham a comunicação com os bancos de dados ativa. Além de link redundante que contorne possíveis quedas na conexão principal;</li>
+        <li>elaborar um plano de Recuperação de Desastres (RD), que defina quais procedimentos serão adotados, sua ordem de execução para o tratamento de possíveis crises que impactem na manutenção e continuidade dos negócios, além dos meios para recuperação dos dados afetados;</li>
+        <li>tais RD’s não devem se limitar aos casos de ataques virtuais, erros no uso dos sistemas, etc. Os mesmos também devem incluir possíveis catástrofes naturais (enchentes, tempestades elétricas, etc.) e quaisquer ocorrências que possam interferir na usabilidade / acesso dos equipamentos de TI envolvidos (incêndios, quedas repentinas de energia, dentre outros);</li>
+        <li>aplicar a geração / guarda rotineira de backups, não só em meios físicos, como também remotos e / ou na nuvem. Estes, além do armazenamento, oferecem opções de acesso global, criptografia, proteção contra vírus, dentre outros.</li>
+    </ul>
+
+        
+</body>
+</html>
