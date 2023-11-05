@@ -227,7 +227,7 @@
                     preco AS "Preço (R$)",
                     qtd_venda AS "Quant.",
                     fn_valor_total(tb_vendas.qtd_venda,tb_produto.preco)
-                    AS "Valor Total"
+                    AS "Valor Total (R$)"
                 FROM
                     tb_vendas
                 INNER JOIN tb_cliente
