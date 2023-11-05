@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança das senhas</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+        h1{
+			font-size: clamp(2rem, 2.6vw, 2.3rem);
+            text-align: center;
+		}
+		
+		h3{
+			font-size: clamp(1.5rem, 2vw, 1.7rem);
+			margin-bottom: 0.2rem;
+		}
+
+		p{
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 1.3rem;
+			padding: 0.5rem;
+			margin: 0;
+		}
+
+        .obs{
+            background-color: dimgray;
+            color: #fff;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin: 0;
+            border-radius: 0.8rem;            
+        }
+
+        h3.obs{
+            text-align: left;            
+            margin: 0.5rem;
+        }
+     
+        li{
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: left;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin-left: 8rem;
+        }
+	</style>
+</head>
+<body>
+    <h1>Atividade da plataforma sobre senhas mais seguras</h1>
+    <p>No ano de 2022, diversas empresas sofreram tentativas de ataques cibernéticos que poderiam impactar diretamente a segurança dos dados. Portanto, é recomendado que funcionários e clientes de lojas virtuais sempre mantenham suas senhas de acesso atualizadas, alterando-as a cada três meses. Pensando nisso, cite pelo menos três métodos para melhorar essas senhas, com foco em fortalecê-las.</p>
+ 
+    <h3 class="obs">Evitar o uso de senhas comuns e óbvias</h3>
+      
+    <p>Não se deve considerar o uso de conhecidas senhas comuns ou óbvias.</p>
+        <p><strong>Exemplos:</strong>
+            <ul>
+                <li>senha123</li>
+                <li>minhasenha</li>
+                <li>12345678</li>
+                <li>password</li>
+                <li>abc123</li>
+            </ul>        
+        </p>
+
+    <h3 class="obs">Evitar as substituições mais comuns</h3>
+    
+    <p>Não se deve considerar como válida a hipótese de trocas comuns de caracteres, por caracteres especiais dentro da senha.</p>   
+    <p><strong>Exemplos:</strong>
+        <ul>
+            <li>senh@</li>
+            <li>5enha</li>
+            <li>s3nha</li>
+        </ul>        
+    </p> 
+        
+    <h3 class="obs">Não utilizar padrões de teclado comuns</h3>  
+    <p>
+        Uma senha como <strong>1qazxsw2</strong> pode parecer complexa, mas se observada atentamente, veremos ser apenas a sequência de duas colunas de caracteres nos teclados comuns. Como existem na internet, dicionários de senhas que listam os padrões comuns, estes sempre serão testados por possíveis invasores.
+    </p>
+
+    
+    <h3 class="obs">Não utilizar uma mesma senha para vários serviços</h3>
+        
+    <p>
+        Se uma mesma senha é utilizada como “padrão” para vários serviços, seu vazamento acarretará num impacto ainda maior sobre os dados perdidos e suas possíveis consequências.      
+    </p>
+
+    <h3 class="obs">Quanto maior a senha, mais difícil de ser quebrada</h3>
+    <p>
+        Os pontos anteriores demonstraram o que não deve ser feito para criação de senhas.
+        Alguns cuidados podem aumentar a segurança destas:
+        <li>Senhas mais longas são mais difíceis de serem quebradas;</li>
+        <li>Senhas maiores e que misturem letras maiúsculas, minúsculas, números e caracteres especiais, tornarão sua quebra consideravelmente mais complicada.</li>
+    </p>
+
+    <h3 class="obs">Considerar o uso de um gerenciador de senhas</h3>
+    <p>
+        Gerenciadores de senha, além de facilitar pela não necessidade de se lembrar de múltiplas senhas, visto este ser um cofre protegido por uma única senha mestra, também podem ser configurados para alterar senhas automaticamente, num periodicidade predefinida.
+    </p>
+
+    <h3 class="obs">Autenticação Multifator (MFA), sempre que disponível</h3>
+    <p>
+        A maioria dos serviços disponibilizam a autenticação de 2 fatores. Dessa forma, mesmo que uma senha seja quebrada, o invasor precisará confirmar sua identidade, também por um outro meio. Estes podem ser códigos enviados por e-mail, SMS, acessados via aplicativos ou tokens.
+    </p>
+        
+</body>
+</html>
