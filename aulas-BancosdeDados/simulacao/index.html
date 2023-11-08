@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+        h1{
+			font-size: clamp(2rem, 2.6vw, 2.3rem);
+            text-align: center;
+		}
+		
+		h3{
+			font-size: clamp(1.5rem, 2vw, 1.7rem);
+			margin-bottom: 0.2rem;
+		}
+
+		p{
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 1.3rem;
+			padding: 0.5rem;
+			margin: 0;
+		}
+
+        .obs{
+            background-color: dimgray;
+            color: #fff;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin: 0;
+            border-radius: 0.8rem;            
+        }
+
+        h3.obs{
+            text-align: center;
+        }
+
+        span{
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+        }
+
+        code,pre{            
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			color: darkgoldenrod;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+
+        #codigo{
+            margin: 2.6rem;
+            margin-left: 8vw;
+        }
+	</style>
+</head>
+<body>
+    <h1>Simulação para apresentação da Sprint V</h1> 
+
+    <span><strong>Ferramenta online utilizada (PostgreSQL)</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>    
+    
+    <div id="codigo">
+        <h3 class="obs">Tabela(s) para exemplificação de criação e seleção no banco de dados</h3>
+      
+        <h3>Criando a tabela tb_artista</h3>
+            <code>
+                <pre>
+                    CREATE TABLE tb_artista(
+                        id SERIAL PRIMARY KEY,
+                        artista VARCHAR(35) UNIQUE
+                    );
+                </pre>
+            </code>
+
+
+        <h3>Criando a tabela tb_discografia</h3>
+            <code>
+                <pre>
+                    CREATE TABLE tb_discografia(
+                        id SERIAL PRIMARY KEY,  	
+                        disco VARCHAR(71) UNIQUE
+                    );
+                </pre>
+            </code>
+
+        <h3>Criando a tabela tb_musicas</h3>
+            <code>
+                <pre>
+                    CREATE TABLE tb_musicas(
+                        id SERIAL PRIMARY KEY,
+                        musica VARCHAR(71) NOT NULL
+                    );
+                </pre>
+            </code>
+
+        <h3>Criando a tabela tb_biografia</h3>
+            <code>
+                <pre>
+                    CREATE TABLE tb_biografia(
+                        id SERIAL PRIMARY KEY,
+                        biografia VARCHAR(20) UNIQUE
+                    );
+                </pre>
+            </code>
+
+        <h3>Importando a id do artista como uma FK para a
+        tabela tb_discografia</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_discografia
+                    ADD COLUMN id_artista INT REFERENCES tb_artista(id);
+                </pre>
+            </code>
+
+        <h3>Incluindo CONSTRAINT na tb_discografia para as 
+        FK's com o id do artista, vindo da tb_artista</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_discografia
+                    ADD CONSTRAINT id_artista_fk
+                    FOREIGN KEY (id_artista) REFERENCES tb_artista(ID)
+                    ON DELETE CASCADE;
+                </pre>
+            </code>
+
+        <h3>Importando a id do artista como uma FK para
+        a tabela tb_musicas</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_musicas
+                    ADD COLUMN id_artista INT REFERENCES tb_artista(id);
+                </pre>
+            </code>
+
+        <h3>Incluindo CONSTRAINT na tb_musicas para as
+        FK's com o id do artista, vindo da tb_artista</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_musicas
+                    ADD CONSTRAINT id_artista_fk
+                    FOREIGN KEY (id_artista) REFERENCES tb_artista(ID)
+                    ON DELETE CASCADE;
+                </pre>
+            </code>
+
+        <h3>Importando a id do disco como uma FK para a tabela
+        tb_musicas</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_musicas
+                    ADD COLUMN id_disco INT REFERENCES tb_discografia(id);
+                </pre>
+            </code>
+
+        <h3>Incluindo CONSTRAINT na tb_musicas para as FK's com 
+        o id do disco, vindo da tb_discografia</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_musicas
+                    ADD CONSTRAINT id_disco_fk
+                    FOREIGN KEY (id_disco) REFERENCES tb_discografia(ID)
+                    ON DELETE CASCADE;
+                </pre>
+            </code>
+
+        <h3>Importando a id do artista como uma FK para
+        a tabela tb_biografia</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_biografia
+                    ADD COLUMN id_artista INT REFERENCES tb_artista(id);
+                </pre>
+            </code>
+
+        <h3>Incluindo CONSTRAINT na tb_biografia para as
+        FK's com o id do artista, vindo da tb_artista</h3>
+            <code>
+                <pre>
+                    ALTER TABLE tb_biografia
+                    ADD CONSTRAINT id_artista_fk
+                    FOREIGN KEY (id_artista) REFERENCES tb_artista(ID)
+                    ON DELETE CASCADE;
+                </pre>
+            </code>
+
+        <h3>Inserindo dados na tabela tb_artista</h3>
+            <code>
+                <pre>
+                    INSERT INTO tb_artista (artista)
+                    VALUES
+                        ('Gojira'),
+                        ('Lamb of God'),
+                        ('Napalm Death');
+                </pre>
+            </code>
+
+        <h3>Incluindo dados de exemplo com nome e id do artista na tabela tb_discografia</h3>
+            <code>
+                <pre>
+                    INSERT INTO tb_discografia (id_artista, disco)
+                    VALUES
+                        (1,'Fortitude'),
+                        (2,'Lamb of God'),
+                        (2,'Wrath'),
+                        (3,'Throes of Joy in the Jaws of Defeatism');
+                    </pre>
+            </code>
+
+        <h3>Inserindo dados de exemplo na tabela tb_musica</h3>
+            <code>
+                <pre>
+                    INSERT INTO tb_musicas (id_artista, id_disco, musica)
+                    VALUES
+                        (1,1,'Born For One Thing'),
+                        (1,1,'The Chant'),
+                        (1,1,'Amazonia'),
+                        (2,2,'Reality Bath'),
+                        (2,3,'Contractor'),
+                        (2,3,'King Me'),
+                        (3,4,'Throes of Joy in the Jaws of Defeatism'),
+                        (3,4,'Joie de Ne Pas Vivre'),
+                        (3,4,'Zero Gravitas Chamber');
+                </pre>
+            </code>
+
+        <h3>Inserindo dados de exemplo na tabela tb_biografia</h3>
+            <code>
+                <pre>
+                    INSERT INTO tb_biografia (id_artista, biografia)
+                    VALUES
+                        (1,'Gojira'),
+                        (2,'Lamb of God'),
+                        (3,'Napalm Death');
+                </pre>
+            </code>
+
+        <h3>Criando a tabela tb_contatos</h3>
+            <code>
+                <pre>
+                    CREATE TABLE tb_contatos(
+                        id SERIAL PRIMARY KEY,
+                        nome VARCHAR(35) UNIQUE,
+                        email VARCHAR(35),
+                        msg TEXT
+                    );
+                </pre>
+            </code>
+
+        <h3>Inserindo dados de exemplo na
+        tb_contatos</h3>
+            <code>
+                <pre>
+                    INSERT INTO tb_contatos(nome,email,msg)
+                    VALUES
+                        ('Maria Silva','maria@mail.com','Venho sempre no site de vcs.'),
+                        ('João Cândido','joaocandido@mail.com','Vcs pretendem permitir um filtro por estilo?');
+                </pre>
+            </code>
+
+        <h3>Unindo os dados das tabelas tb_artista, tb_musicas e tb_discografia</h3>
+            <code>
+                <pre>
+                    SELECT tb_artista.id, tb_artista.artista, tb_discografia.disco,tb_musicas.musica
+                    FROM tb_artista
+                    INNER JOIN tb_musicas
+                        on tb_musicas.id_artista = tb_artista.id
+                    INNER JOIN tb_discografia
+                        on tb_discografia.id_artista = tb_artista.id
+                    ORDER BY tb_artista.artista DESC;
+                </pre>
+            </code>
+                        
+        <h3>Buscando as músicas e o disco de um artista específico</h3>
+            <code>
+                <pre>
+                    SELECT tb_musicas.musica, tb_discografia.disco
+                    FROM tb_musicas
+                    INNER JOIN tb_discografia
+                        ON tb_musicas.id_disco = tb_discografia.id
+                    INNER JOIN tb_artista
+                        ON tb_discografia.id_artista = tb_artista.id
+                    WHERE tb_artista.artista = 'Lamb of God'
+                    ORDER BY tb_musicas.musica DESC;
+                </pre>
+            </code>
+
+        <h3>Demonstrando os artistas que têm tanto dados
+        da discografia, quanto da biografia cadastrados</h3>
+            <code>
+                <pre>
+                    SELECT tb_artista.artista, tb_biografia
+                    FROM tb_artista
+                    LEFT JOIN tb_biografia
+                    ON tb_artista.id = tb_biografia.id_artista
+                    WHERE tb_artista.id
+                        IN(SELECT DISTINCT id_artista FROM tb_discografia)
+                    ORDER BY tb_artista.artista DESC;
+                </pre>
+            </code>
+                
+        <h3>Mostrando as mensagens registradas</h3>    	
+            <code>
+                <pre>
+                    SELECT * FROM tb_contatos;
+                </pre>
+            </code>
+    </div>   
+</body>
+</html>
