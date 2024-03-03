@@ -1,0 +1,35 @@
+    {
+        "id": [
+            1,
+            2,
+            3
+        ],
+        "nome": [
+            "PC",
+            "Notebook",
+            "Tablet"
+        ],
+        "marca": [
+            "Dell",
+            "Acer",
+            "Samsung"
+        ],
+        "categoria": [
+            "informatica"
+        ],
+        "preço": [
+            3053,
+            2583,
+            1035
+        ],
+        "quant_estoque": [
+            53,
+            35,
+            71
+        ],
+        "pronta_entrega": [
+            true,
+            true,
+            false
+        ]
+    }
