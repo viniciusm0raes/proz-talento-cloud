@@ -59,14 +59,32 @@
         h3.obs{
             text-align: center;
         }
-     
-        li{
+
+        span{
             font-size: clamp(1.3rem, 2vw, 1.7rem);
 			line-height: 1.5;
-			text-align: left;
-            text-indent: 0;
-			padding: 0.5rem;
-			margin-left: 8rem;
+        }
+
+        code{            
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			color: #fff;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+			color:rgb(230, 180, 56);
+		}
+
+        #codigo{
+            margin: 2.6rem;
+            margin-left: 8vw;
         }
 	</style>
 </head>
@@ -78,7 +96,45 @@
         Observação: é interessante escrever a string num arquivo com extensão .json no VSCode, pois o editor nos mostrará qualquer possível erro de sintaxe com um sublinhado vermelho.
     </p>
 
-	<h3 class="obs">Link para o arquivo JSON</h3>
-	<a href="https://viniciusm0raes.github.io/proz-talento-cloud/api_curso-proz/json/produtos.json">Produtos no formato JSON</a>
+	<h3 class="obs"><a href="https://viniciusm0raes.github.io/proz-talento-cloud/api_curso-proz/json/produtos.json" target="_blank">Link para o arquivo produtos.json</a></h3>	
+	<code>
+		<pre>
+			{
+				"id": [
+					1,
+					2,
+					3
+				],
+				"nome": [
+					"PC",
+					"Notebook",
+					"Tablet"
+				],
+				"marca": [
+					"Dell",
+					"Acer",
+					"Samsung"
+				],
+				"categoria": [
+					"informatica"
+				],
+				"preço": [
+					3053,
+					2583,
+					1035
+				],
+				"quant_estoque": [
+					53,
+					35,
+					71
+				],
+				"pronta_entrega": [
+					true,
+					true,
+					false
+				]
+			}
+		</pre>
+	</code>
 </body>
 </html>
