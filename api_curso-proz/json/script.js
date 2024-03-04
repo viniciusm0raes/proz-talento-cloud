@@ -24,3 +24,9 @@ console.log(parsedJSON.nome)
 console.log(parsedJSON.idade)
 console.log(parsedJSON.estrangeiro)
 
+//Convertendo Objeto JS em JSON
+const dadosEmJS = {id:[1,2,3],nome:["PC","Notebook","Celular"],marca:["Dell","Acer","Samsung"],categoria:["informatica"],"preço (R$)":[3053.35,2583.53,1035.08],quant_estoque:[53,35,71],pronta_entrega:[true,true,false]}
+
+const jsParaJson = JSON.stringify(dadosEmJS)
+console.log(jsParaJson)
+console.log(typeof(jsParaJson))
