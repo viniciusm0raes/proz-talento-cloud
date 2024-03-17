@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisições / Query Strings API - Atividade 02</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+        h1{
+			font-size: clamp(2rem, 2.6vw, 2.3rem);
+            text-align: center;
+		}
+		
+		h3{
+			font-size: clamp(1.5rem, 2vw, 1.7rem);
+			margin-bottom: 0.2rem;
+		}
+
+		p{
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 1.3rem;
+			padding: 0.5rem;
+			margin: 0;
+		}
+
+        .obs{
+            background-color: dimgray;
+            color: #fff;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 0.5rem;
+			margin: 0;
+            border-radius: 0.8rem;            
+        }
+
+        h3.obs{
+            text-align: center;
+        }
+
+        span{
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+			line-height: 1.5;
+        }
+
+        code{            
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			color: #fff;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+			color:rgb(230, 180, 56);
+		}
+
+        #codigo{
+            margin: 2.6rem;
+            margin-left: 8vw;
+        }
+	</style>
+</head>
+<body>
+    <h3 class="obs">Requisições / Query Strings API - Atividade 02</h3>
+    <p>
+        Você está desenvolvendo um site de e-commerce e precisa exibir uma lista de produtos ao seu usuário. Para isso, você precisa fazer uma requisição do tipo GET a uma API solicitando a lista de produtos pela seguinte URL: https://lojafalsaapi.com/produtos.
+
+		Pensando em como aprimorar a experiência do seu usuário, você confere a documentação da API e encontra o seguinte trecho: 
+
+		Para ordenar os produtos, basta incluir a chave 'ordenar' com o valor 'asc' de ascendente, ou 'dec' de decrescente na query string da sua requisição. É também possível limitar o número de resultados exibidos usando a chave 'limite' com um número representando a quantidade de produtos a ser exibidos como valor. 
+
+		Escreva a rota da requisição necessária para solicitar a lista de produtos em ordem alfabética inversa (do Z ao A). Como desafio extra, defina também um máximo de 20 produtos a serem exibidos: 
+    </p>
+
+		<p style="text-align: center; font-size: clamp(2rem, 2.5vw, 2.3rem);">
+			<strong>https://lojafalsaapi.com/produtos/ordenar=dec&limite=20</strong>
+		</p>
+	
+</body>
+</html>
