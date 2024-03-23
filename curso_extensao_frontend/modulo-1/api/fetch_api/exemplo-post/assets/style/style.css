@@ -1,0 +1,110 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;    
+}
+
+html {
+    font-size: 62.5%;    
+}
+
+body{    
+    background-color: rgb(23, 78, 160);
+    font-family: "Montserrat";
+    font-size: clamp(1.5rem, 2vw, 1.8rem); 
+    color: #fff;
+    margin: auto;
+}
+
+#main{
+	display: flex;
+	justify-content: center;
+	width: 95vw;	
+}
+
+#container{
+	display: flex;	
+	justify-content: space-between;
+	width: 90vw;
+	padding: 0.8rem;
+	margin: auto;
+  	
+}
+
+#cadastrados{
+	float: right;
+	width: 40vw;
+	justify-content: flex-end;
+	margin: 1.3rem 0.8rem;
+}
+
+form, input, textarea, #btn-enviar{
+  border: none;
+  font-family: "Montserrat";
+}
+
+form {
+  	display: flex;
+  	float: left;
+  	flex-direction: column;
+	justify-content: flex-start;  	
+	width: 40vw;		
+  	gap: 0.8rem;  
+}
+
+input {
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+}
+
+textarea {
+  padding: 0.8rem;  
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+}
+
+#btn-enviar{
+  background-color: lightskyblue;
+  color: #000;    
+  font-size: 2rem;  
+  border-radius: 0.8rem;
+}
+
+#btn-enviar:hover {
+  background-color: darkblue;  
+  color: #fff;
+  font-weight: bolder;
+}
+
+h2{
+  text-align: center;
+  margin-top: 1.3rem;
+}
+
+h2, h4, form{
+  margin-left: 0.8rem;
+}
+
+h2, h4, label{
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 600px) {  			
+	#container{
+		flex-direction: column;
+		width: 90vw;
+	}
+	
+	#cadastrados, form{	
+	width: 85vw;	
+	margin: auto;
+}
+
+	#produtos-cadastrados{	
+	margin-top: 1.3rem;
+}
+}
