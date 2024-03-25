@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Test HTTP Bin</title>
+  <title>Atividade - Test HTTP Bin</title>
   <link rel="stylesheet" href="./assets/style/style.css">
   <script type="text/javascript" src="./assets/scripts/script.js" defer></script>
 </head>
@@ -25,12 +25,14 @@
       <label for="descricao-produto">Descrição do produto:</label>
       <textarea name="descricao-produto" id="descricao-produto" cols="30" rows="10"></textarea>
       <button id="btn-enviar">Enviar</button>
+      <span id="res-usuario-cad"></span>      
     </form>
     <p id="feedback-usuario" ></p>    
-    <section id="produtos-cadastrados">
-		<h4>Produtos Cadastrados:</h4>
-		<textarea name="cadastrados" id="cadastrados" cols="30" rows="10"></textarea>
-    </section>
+    <section id="title-cadastrados"><h4>Produtos Cadastrados:</h4>
+      <div id="produtos-cadastrados">		
+      <!-- Aqui ficarão os produtos cadastrados -->
+      </div>
+    </section>    
     </div>
   </main>
 </body>

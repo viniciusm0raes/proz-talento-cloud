@@ -34,11 +34,11 @@ body{
   	
 }
 
-#cadastrados{
+#title-cadastrados{
 	float: right;
 	width: 40vw;
 	justify-content: flex-end;
-	margin: 1.3rem 0.8rem;
+	margin-top: 0.8rem;
 }
 
 form, input, textarea, #btn-enviar{
@@ -68,15 +68,15 @@ textarea {
 }
 
 #btn-enviar{
-  background-color: lightskyblue;
-  color: #000;    
+  background-color: darkblue;
+  color: #fff;    
   font-size: 2rem;  
   border-radius: 0.8rem;
 }
 
 #btn-enviar:hover {
-  background-color: darkblue;  
-  color: #fff;
+  background-color: rgba(44, 120, 235);  
+  color: #000;
   font-weight: bolder;
 }
 
@@ -93,18 +93,25 @@ h2, h4, label{
   font-weight: bolder;
 }
 
+.cadastrados{
+  background-color: rgba(44, 120, 235, 0.534);
+  border-radius: 0.8rem;  
+  margin: 0.8rem 1.3rem;
+  padding: 1.3rem;
+}
+
+/* media-query */
 @media only screen and (max-width: 600px) {  			
 	#container{
 		flex-direction: column;
 		width: 90vw;
 	}
 	
-	#cadastrados, form{	
-	width: 85vw;	
-	margin: auto;
-}
+	form{		
+	  margin: auto;
+  }
 
-	#produtos-cadastrados{	
-	margin-top: 1.3rem;
-}
+	.cadastrados{		
+    margin-top: 0.8rem;
+  }
 }
