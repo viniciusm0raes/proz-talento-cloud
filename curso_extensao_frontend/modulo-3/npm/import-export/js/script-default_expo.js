@@ -5,5 +5,5 @@ import modulo from './calculadora.js';
 const soma = modulo.somar(8,5)
 console.log(soma);
 
-const subtrair = modulo.subtrair(13,5)
-console.log(subtrair);
+const subtracao = modulo.subtrair(13,5)
+console.log(subtracao);
