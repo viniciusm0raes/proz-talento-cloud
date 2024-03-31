@@ -37,24 +37,21 @@ let numero: NumerosPermitidos = 5;
 
 //Tipagem de Arrays
 
-type Aluno = {
+type AlunoType = {
 	nome: string,
 	matricula: number
 };
 
-let alunos: Aluno[] = [
+let alunos: AlunoType[] = [
 	{nome: 'Vinícius', matricula: 20230008},
 	{nome: 'Maria', matricula: 20230009}
 ];
 
-console.log(alunos[0])
-
-
 //Tipagem de Funções
-function retornarPrimeiro(lista: Aluno[]): string{
+function retornarPrimeiro(lista: AlunoType[]): string {
 	const primeiro = lista[0]
 	return `O(a) aluno(a) ${primeiro.nome} tem a matrícula de número ${primeiro.matricula}.`
-}
+};
 
 console.log(retornarPrimeiro);
 
@@ -63,6 +60,32 @@ type ProdutoType = {
 	preco: number
 };
 
-function apresentarProduto(produto: ProdutoType){
-	return `O produto ${produto.nome} custa R$${produto.preco}`
+let produtos: ProdutoType[] = [
+	{nome:'Prod01',	preco:8.00},
+	{nome:'Prod02', preco:5.30}
+];
+
+function apresentarProduto(produtos: ProdutoType): string{
+	return `O produto ${produtos.nome} custa R$${produtos.preco}.`
 };
+
+console.log(apresentarProduto)
+
+
+//Parâmetros opcionais
+function calcularPagamento(valor: number, parcelas: number, desconto?: number){
+	const parcelasComValores: number[] = []
+	for (let i = 1; i <= parcelas; i++){
+		let valorNovo = valor
+		if(desconto){
+			valorNovo = valor - (valor * desconto)
+		}
+		parcelasComValores.push(valorNovo / parcelas)
+	}
+	
+	return parcelasComValores
+};
+
+console.log(calcularPagamento(100, 3, 0.1));
+console.log(calcularPagamento(100, 4, 0.2));
+console.log(calcularPagamento(30, 3));
