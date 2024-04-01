@@ -23,3 +23,36 @@ let alunoNovo: AlunoType = {
 
 listaAlunos.push(alunoNovo)
 console.log(alunoNovo)
+
+
+
+// Genéricos com Objetos
+type Filme = {
+	titulo: string,
+	genero: 'animação' | 'ação' | 'suspense' | 'drama'
+}
+
+let listaFilmes: Filme[] = []
+listaFilmes.push(	
+	{titulo: 'Matrix', genero: 'ação'},
+	{titulo: 'O Preço do Amanhã', genero: 'ação'},
+	{titulo: 'Um Sonho de Liberdade', genero: 'drama'},
+	{titulo: 'Os Intocáveis', genero:'suspense'}
+)
+
+type ResumoLista<T> = {
+	total: number,
+	ultimo: T,
+	lista: T[]
+}
+
+let filmeMaisRecente: ResumoLista<Filme> = {
+	total: listaFilmes.length,
+	ultimo: listaFilmes[listaFilmes.length - 1],
+	lista: listaFilmes
+}
+
+console.log(filmeMaisRecente.ultimo.titulo)
+console.log(filmeMaisRecente.ultimo.genero)
+console.log(filmeMaisRecente.lista)
+console.log(filmeMaisRecente.total)
