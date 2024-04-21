@@ -15,13 +15,13 @@
 
 [5. Pesquise uma ilustração que representa a arquitetura cliente-servidor e, com base na imagem, explique o seu funcionamento](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade5/cliente-servidor.pdf/cliente-servidor.pdf)
 
-[6. Criar tabela de dados, definir atributos desta, adicionar chave primária e tipificar dados](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade6/Atividade6.pdf)
+[6. Criar tabela de dados, definir atributos desta, adicionar chave primária e tipificar dados](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade6/)
 
 ### Bancos de Dados - Módulo II
 
 #### Módulo II - Lista de atividades da plataforma
 
-[7. Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade7/Atividade7.pdf)
+[7. Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade7/)
 
 [8. Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um trigger que se relacione com algum comando, como insert, select, delete ou update](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade8/Atividade8.pdf)
 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOINS em consultas</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+		h1{
+			font-size: clamp(2.3rem, 3vw, 2.6rem);			
+			margin: 0 0 1rem 0;			
+			font-weight: bold;
+		}
+
+        h2.obs{
+			color: #000;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            text-align: center;
+			background-color: lightgrey;	
+			font-weight: bold;		
+        }
+			
+		h3{
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			margin-bottom: 1rem;
+		}
+
+		.obs{
+            background-color: grey;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;			
+			margin: 1rem 0;
+            padding: 1rem;            
+            border-radius: 0.8rem;            
+        }       
+
+        div > ol{
+            margin: 0;
+        }
+
+        div > p{
+            margin: 0;
+        }
+
+        span{
+            background-color: #000;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+            margin-top: 0;
+            padding: 0.5rem;
+            border-radius: 0.8rem;   
+        }
+
+        code{            
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			color: darkgoldenrod;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+
+        #codigo{
+            margin: 1rem 10rem;            
+            padding: 0;            
+        }
+	</style>
+</head>
+<body>
+    <h1>Bancos de Dados - Módulo II</h1>    
+    <div class="obs">
+        <p>Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais. Siga as instruções:</p>
+        <ol>            
+            <li>crie uma base de dados;</li>
+            <li>crie tabelas nessa base de dados;</li>
+            <li>em cada tabela, adicione atributos;</li>
+            <li>insira dados em cada tabela;</li>
+            <li>utilize os comandos Joins para realizar consultas nas tabelas.</li> 
+        </ol>        
+    </div>
+
+    <span><strong>Ferramenta online utilizada (PostgreSQL)</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>    
+    
+    <div id="codigo">
+        <p class="obs"><strong>Obs.</strong>: Como a ferramenta <strong>sqliteonline</strong> não permite a criação de um NOVO Banco de Dados, serão apresentados apenas os códigos de criação das Tabelas, Consultas e Junções (JOINS).</p>        
+        <h3>Criando a tabela tb_disciplinas</h3>
+        <code><pre>
+            CREATE TABLE tb_disciplinas (
+                id_disciplina SERIAL PRIMARY KEY,
+                nome_disciplina VARCHAR(50) NOT NULL,
+                nome_professor VARCHAR(50) NOT NULL
+            );
+        </code></pre>        
+        <h3>Criando a tabela tb_alunos, já referenciando (CONSTRAINT) como chaves estrangeiras (FOREIGN KEY), as chaves primárias (PRIMARY KEY) presente na tabela tb_disciplinas </h3>
+        <code><pre>
+            CREATE TABLE tb_alunos(
+                id_aluno SERIAL PRIMARY KEY,
+                nome_aluno VARCHAR(50) NOT NULL,
+                id_disciplina INT,
+                CONSTRAINT id_disciplina_fk
+                FOREIGN KEY (id_disciplina)
+                REFERENCES tb_disciplinas (id_disciplina)
+            );
+        </code></pre>
+        <h3>Inserindo dados na tabela tb_disciplinas</h3>
+        <code><pre>
+            INSERT INTO tb_disciplinas(nome_disciplina, nome_professor)
+            VALUES
+                ('Banco de Dados','Mariah Nunes'),
+                ('Python','Pietra Santos'),
+                ('POO','Angela Alves');
+        </code></pre>
+        <h3>Inserindo dados na tabela tb_alunos</h3>
+        <code><pre>
+            INSERT INTO tb_alunos(nome_aluno, id_disciplina)
+            VALUES
+                ('Júlia', 2),
+                ('Manuela', 1),
+                ('Luana', 1),
+                ('Gabriela', 2),
+                ('Lucas', NULL),
+                ('Frida', 3),
+                ('José', NULL),
+                ('Marcos', NULL);
+        </code></pre>
+        
+        <h3>Inner Join (tb_alunos / tb_disciplinas)</h3>
+        <code><pre>
+            SELECT nome_aluno, nome_disciplina FROM tb_alunos
+            INNER JOIN tb_disciplinas
+                ON tb_disciplinas.id_disciplina = tb_alunos.id_disciplina;
+        </code></pre>
+
+        <h3>Left Join (tb_alunos / tb_disciplinas)</h3>
+        <code><pre>
+            SELECT nome_aluno, nome_disciplina
+            FROM tb_alunos
+            LEFT JOIN tb_disciplinas
+                ON tb_disciplinas.id_disciplina = tb_alunos.id_disciplina;
+        </code></pre>
+
+        <h3>Right Join (tb_alunos / tb_disciplinas)</h3>
+        <code><pre>
+            SELECT nome_aluno, nome_disciplina
+            FROM tb_alunos
+            RIGHT JOIN tb_disciplinas
+                ON tb_disciplinas.id_disciplina = tb_alunos.id_disciplina;
+        </code></pre>
+
+        <h3>Outer Join, Full Outer Join ou Full Join (tb_alunos / tb_disciplinas)</h3>
+        <code><pre>
+            SELECT nome_aluno, nome_disciplina
+            FROM tb_alunos
+            LEFT JOIN tb_disciplinas
+                ON tb_disciplinas.id_disciplina = tb_alunos.id_disciplina
+            UNION
+            SELECT nome_aluno, nome_disciplina
+            FROM tb_alunos
+            RIGHT JOIN tb_disciplinas
+                ON tb_disciplinas.id_disciplina = tb_alunos.id_disciplina;
+        </code></pre>    
+    </div>   
+</body>
+</html>
