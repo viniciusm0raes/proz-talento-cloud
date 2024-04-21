@@ -1,6 +1,5 @@
 ## [Talento Cloud Pro](https://pages.prozeducacao.com.br/lp-proz-tecnologia-talento-cloud#rd-column-l7182sgm)
 
-
 ### Bancos de Dados - Módulo I
 
 #### Módulo I - Lista de atividades da plataforma
@@ -23,7 +22,7 @@
 
 [7. Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade7/)
 
-[8. Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um trigger que se relacione com algum comando, como insert, select, delete ou update](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade8/Atividade8.pdf)
+[8. Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um trigger que se relacione com algum comando, como insert, select, delete ou update](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade8/index.html)
 
 [9. Criar um procedure que faça um levantamento diário da quantidade de produtos comprados por dia](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade9/index.html)
 

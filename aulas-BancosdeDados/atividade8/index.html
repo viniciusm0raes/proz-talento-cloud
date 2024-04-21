@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triggers SQL (gatilhos)</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+		h1{
+			font-size: clamp(2.3rem, 3vw, 2.6rem);			
+			margin: 0 0 1rem 0;			
+			font-weight: bold;
+		}
+
+        h2.obs{
+			color: #000;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            text-align: center;
+			background-color: lightgrey;	
+			font-weight: bold;		
+        }
+			
+		h3{
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			margin-bottom: 1rem;
+		}
+
+		.obs{
+            background-color: grey;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;			
+			margin: 1rem 0;
+            padding: 1rem;            
+            border-radius: 0.8rem;            
+        }       
+
+        div > ol{
+            margin: 0;
+        }
+
+        div > p{
+            margin: 0;
+        }
+
+        span{
+            background-color: #000;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+            margin-top: 0;
+            padding: 0.5rem;
+            border-radius: 0.8rem;   
+        }
+
+        code{            
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			color: darkgoldenrod;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+
+        #codigo{
+            margin: 1rem 10rem;            
+            padding: 0;            
+        }
+	</style>
+</head>
+<body>
+    <h1>Bancos de Dados - Módulo II</h1>    
+    <div class="obs">
+        <p>Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um <strong>trigger</strong> que se relacione com algum comando, como insert, select, delete ou update.</p>       
+    </div>
+
+    <span><strong>Ferramenta online utilizada (PostgreSQL)</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>    
+    
+    <div id="codigo">               
+        <h3>Criando a tabela tb_produto</h3>
+        <code><pre>
+            CREATE TABLE tb_produto (
+                id_produto SERIAL NOT NULL PRIMARY KEY,
+                nome_produto VARCHAR(45) NULL,
+                preco_normal DECIMAL(10,2) NULL,
+                preco_desconto DECIMAL(10,2) NULL
+              );
+        </code></pre>        
+        <h3>Criando a função que posteriormente será chamada pelos gatilhos declarados no trigger</h3>
+        <code><pre>
+            CREATE OR REPLACE FUNCTION tr_calc_desconto()
+            RETURNS TRIGGER AS $$
+            BEGIN
+                NEW.preco_desconto = (NEW.preco_normal * 0.90);
+                RETURN NEW;
+            END;
+            $$ language 'plpgsql';
+        </code></pre>
+
+        <p class="obs"><strong>Obs.</strong>: O uso do NEW antes do atributo é necessário em função deste dado ainda não existir. Dessa forma, o Trigger pegará o dado que se está tentando inserir, chamará a função que calculará o desconto e <strong>só depois</strong>fará a inserção. A necessidade do NEW se dá em função do tipo de operação (INSERT).</p>                 
+
+        <h3>Criando o TRIGGER, tendo como gatilhos um INSERT, UPDATE ou DELETE</h3>
+        <code><pre>
+            CREATE TRIGGER tr_desconto BEFORE INSERT OR UPDATE OR DELETE
+            ON tb_produto
+            FOR EACH ROW
+            EXECUTE PROCEDURE tr_calc_desconto();
+        </code></pre>
+        <h3>Inserindo dados na tabela tb_produto</h3>
+        <code><pre>
+            INSERT INTO tb_produto (nome_produto, preco_normal)
+            VALUES
+            ('Monitor', 853.00),
+            ('Teclado', 71.00),
+            ('Gabinete', 353.35);
+        </code></pre>
+        <h3>Visualizando a tabela tb_produto</h3>
+        <code><pre>
+            SELECT * FROM tb_produto;
+        </code></pre>
+        <p class="obs"><strong>Obs.</strong>: Atentar que <strong>na inserção</strong>, o preco_desconto <strong>não está sendo declarado</strong>. É o Trigger que fará esse cálculo e inserção. Na tabela podemos verificar que o Trigger, chamou a função para os cálculos e fez corretamente inserção dos dados do preco_desconto com os -10% previstos.</p>  
+        
+    </div>   
+</body>
+</html>
