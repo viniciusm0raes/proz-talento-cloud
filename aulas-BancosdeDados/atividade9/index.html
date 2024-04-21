@@ -25,53 +25,71 @@
 			padding: 1.3rem;
 		}
 
-        h1{
-			font-size: clamp(2rem, 2.6vw, 2.3rem);
-            text-align: center;
+		h1{
+			font-size: clamp(2.3rem, 3vw, 2.6rem);			
+			margin: 0 0 1rem 0;			
+			font-weight: bold;
 		}
-		
+
+        h2.obs{
+			color: #000;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            text-align: center;
+			background-color: lightgrey;	
+			font-weight: bold;		
+
+        }
+			
 		h3{
-			font-size: clamp(1.5rem, 2vw, 1.7rem);
-			margin-bottom: 0.2rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			margin-bottom: 1rem;
 		}
 
 		p{
-			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
 			line-height: 1.5;
 			text-align: justify;
-            text-indent: 1.3rem;
-			padding: 0.5rem;
+			padding: 0rem 3rem;
 			margin: 0;
 		}
+
+		p.obs{
+            background-color: grey;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 1rem;
+			margin: 2rem, 0;
+            border-radius: 0.8rem;            
+        }
 
         .obs{
             background-color: dimgray;
             color: #fff;
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            font-size: clamp(1.8rem, 2.3vw, 2rem);
 			line-height: 1.5;
 			text-align: justify;
             text-indent: 0;
-			padding: 0.5rem;
-			margin: 0;
+			padding: 1rem;
+			margin: 2rem, 0;
             border-radius: 0.8rem;            
         }
 
-        h3.obs{
-            text-align: center;
-        }
-
         span{
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
 			line-height: 1.5;
+            margin-top: 1rem;
         }
 
         code{            
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
         }
 
         a{
 			margin: 1rem 0.5rem;
-			font-size: clamp(1.3rem, 2vw, 1.7rem);
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
 			color: darkgoldenrod;
 			text-decoration: none;    
 		}    
@@ -82,19 +100,20 @@
 		}
 
         #codigo{
-            margin: 2.6rem;
-            margin-left: 8vw;
+            margin: 1rem 10rem;            
+            padding: 0;
+            
         }
 	</style>
 </head>
 <body>
-    <h1>Atividade da plataforma sobre Procedure(s) (SQL)</h1>
-    <p>Uma empresa de vendas tem um banco de dados com informações sobre os seus produtos. Ela precisa criar um relatório que faça um levantamento diário da quantidade de produtos comprados por dia. Para ajudar a empresa, crie um procedure para agilizar esse processo.</p>
+    <h1>Bancos de Dados - Módulo I</h1>    
+    <p class="obs">Uma empresa de vendas tem um banco de dados com informações sobre os seus produtos. Ela precisa criar um relatório que faça um levantamento diário da quantidade de produtos comprados por dia. Para ajudar a empresa, crie um procedure para agilizar esse processo.</p>
 
-    <span><strong>Ferramenta online utilizada (PostgreSQL)</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>
+    <span><strong>Ferramenta online utilizada (PostgreSQL)</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>    
     
     <div id="codigo">
-        <h3 class="obs">Tabelas de exemplo para utilização de PROCEDURE(S)</h3>
+        <h2 class="obs">Tabelas de exemplo para utilização de PROCEDURE(S)</h2>        
         <h3>Criando uma tabela de produtos</h3>
         <code><pre>
             CREATE TABLE tb_produto(

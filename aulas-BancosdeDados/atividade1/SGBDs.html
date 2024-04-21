@@ -30,34 +30,71 @@
 		img{
 			justify-content: center;
 			width: 62vw;
+			padding-left: 3rem;
 		}
 
 		h1{
-			font-size: 2.6rem;
+			font-size: clamp(2.3rem, 3vw, 2.6rem);			
+			margin: 0 0 1rem 0;			
+			font-weight: bold;
 		}
-		h2{
-			font-size: 2rem;
-		}
+
+        h2.obs{
+			color: #000;
+            text-align: center;
+			background-color: lightgrey;	
+			font-weight: bold;		
+
+        }
+			
 		h3{
-			font-size: 1.8rem;
+			font-size: clamp(1.3rem, 2vw, 1.7rem);
 			margin-bottom: 1rem;
 		}
+
 		p{
-			font-size: 1.5rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
 			line-height: 1.5;
 			text-align: justify;
 			padding: 0rem 3rem;
 			margin: 0;
 		}
 
+		p.obs{
+            background-color: grey;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 1rem;
+			margin: 2rem, 0;
+            border-radius: 0.8rem;            
+        }
+
+        .obs{
+            background-color: dimgray;
+            color: #fff;
+            font-size: clamp(1.8rem, 2.3vw, 2rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;
+			padding: 1rem;
+			margin: 2rem, 0;
+            border-radius: 0.8rem;            
+        }
+
+
 	</style>
 </head>
 <body>
-	<h1>SGBDs (Ranking 2023)</h1>
+	<h1>Bancos de Dados - Módulo I</h1>
+	<p class="obs">O Sistema de Gerenciamento de Bancos de Dados é um conjunto de programas que serve para gerenciar um ou mais bancos de dados. Sendo assim, pesquise sobre os bancos de dados mais utilizados no mercado de trabalho e descreva dois deles.</p>
+	<h2 class="obs">SGBDs (Ranking 2023)</h2>
 	<a href="https://db-engines.com/en/ranking" target="_blank" title="DB-Engines Ranking, acessado em 05/10/23."><img src="./rank-SGBDs.png" alt="SGBDs (SGBDs mais utilizados em 2023)"></a>
 	<p>Fonte: <a href="https://db-engines.com/en/ranking" target="_blank">DB-Engines Ranking, acessado em 05/10/23.</a></p>
 	<div id="descricao">
-		<h2>Descrição dos dois primeiros colocados</h2>
+		<h2 class="obs">Descrição dos dois primeiros colocados</h2>
 		<h3>Oracle</h3>
 		<p>Flexível, rodando em diferentes plataformas como Windows e Linux e utilizando como sua linguagem principal o PS/SQL (uma extensão da linguagem padrão SQL para o SGBD Oracle da Oracle Corporation);</p>
 		<h3>MySQL</h3>
