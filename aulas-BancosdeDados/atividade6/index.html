@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedure(s) (SQL)</title>
+    <style>	
+		@charset "UTF-8";
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	
+	
+		html {
+			font-size: 62.5%;
+			height: 90%;
+			
+		}
+	
+		body{    
+			display: flex;
+			flex-direction: column;
+			font-family: "Montserrat", sans-serif;
+			background-color: #f8f8f8;			
+			color: #000;
+			margin: auto;
+			padding: 1.3rem;
+		}
+
+		h1{
+			font-size: clamp(2.3rem, 3vw, 2.6rem);			
+			margin: 0 0 1rem 0;			
+			font-weight: bold;
+		}
+
+        h2.obs{
+			color: #000;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            text-align: center;
+			background-color: lightgrey;	
+			font-weight: bold;		
+        }
+			
+		h3{
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			margin-bottom: 1rem;
+		}
+
+		.obs{
+            background-color: grey;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+			text-align: justify;
+            text-indent: 0;			
+			margin: 1rem 0;
+            padding: 1rem;            
+            border-radius: 0.8rem;            
+        }       
+
+        div > ul{
+            margin: 0;
+        }
+
+        div > p{
+            margin: 0;
+        }
+
+        span{
+            background-color: #000;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			line-height: 1.5;
+            margin-top: 0;
+            padding: 0.5rem;
+            border-radius: 0.8rem;   
+        }
+
+        code{            
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			color: darkgoldenrod;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+
+        #codigo{
+            margin: 1rem 10rem;            
+            padding: 0;            
+        }
+	</style>
+</head>
+<body>
+    <h1>Bancos de Dados - Módulo I</h1>    
+    <div class="obs">
+        <p>De acordo com os comandos aprendidos, programe códigos SQL para criar um banco de dados chamado ESCOLA e deixe-o pronto para o uso. Depois, pesquise qual é o comando utilizado para inserir uma tabela no banco de dados e siga as instruções:</p>
+        <ul>
+            <li>1. crie uma tabela chamada ALUNO;</li>
+            <li>2. defina os atributos da tabela;</li>
+            <li>3. adicione a chave primária de nome ID (identificador);</li>
+            <li>4. adicione um atributo nome do tipo varchar;</li>
+            <li>5. adicione um atributo e-mail do tipo varchar;</li>
+            <li>6. adicione um atributo endereço do tipo varchar.</li>
+        </ul>        
+    </div>
+
+    <span><strong>Ferramenta online utilizada (PostgreSQL)</strong>: <a href="https://sqliteonline.com/" target="_blank">https://sqliteonline.com/</a></span>    
+    
+    <div id="codigo">
+        <h2 class="obs">Código(s) SQL utilizado para criação do Banco de Dados de nome Escola</h2>        
+        <h3>Criando uma tabela de produtos</h3>
+        <code><pre>
+            CREATE DATABASE db_escola;
+        </code></pre>
+        <p class="obs">A ferramenta online utilizada <strong>não permite</strong> a criação de DATABASE. Códigos apenas demonstrativos.</p>
+        <h3>Selecionar a tabela criada para alterações, inclusões, etc.</h3>
+        <code><pre>
+            <strong>PostgreSQL (via psql)</strong>
+            \c nome_do_banco_de_dados;
+            \c db_escola;
+
+            <strong>MySQL</strong>            
+            USE nome_do_banco_de_dados;
+            USE db_escola;
+        </code></pre>
+        <h3>Criação da tabela de nome tb_aluno e atendimento dos itens solicitados</h3>
+        <code><pre>
+            CREATE TABLE tb_aluno(
+                id_aluno SERIAL PRIMARY KEY,
+                nome VARCHAR(20) NOT NULL,
+                email VARCHAR(30),
+                endereço VARCHAR(80) NOT NULL
+                );
+        </code></pre>
+        <h3>Inserindo dados na tabela tb_aluno</h3>
+        <code><pre>
+            INSERT INTO tb_aluno(nome, email, endereço)
+            VALUES
+                ('Anabel da Silva', 'anabel@mail.com', 'Rua 1, nº 2, Manaus-AM'),
+                ('Flávia dos Santos', 'flavia@mail.com', 'Rua 2, nº 1, Salvador-BA'),
+                ('José Alves', 'josealves@mail.com', 'Rua 3, nº 3, Brasília-DF');
+        </code></pre>
+        
+        <h3>Visualizando dados da tabela tb_aluno</h3>
+        <code><pre>
+            SELECT * FROM tb_aluno;
+        </code></pre>
+    </div>   
+</body>
+</html>
