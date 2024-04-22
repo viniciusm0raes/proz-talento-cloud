@@ -25,55 +25,94 @@
 			padding: 1.3rem;
 		}
 
-        h1{
-			font-size: clamp(2rem, 2.6vw, 2.3rem);
+		h1{
+			font-size: clamp(2.3rem, 3vw, 2.6rem);			
+			margin: 0 0 1rem 0;			
+			font-weight: bold;
+		}
+
+        h2.obs{
+			color: #000;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
             text-align: center;
-		}
-		
+			background-color: lightgrey;	
+			font-weight: bold;		
+        }
+			
 		h3{
-			font-size: clamp(1.5rem, 2vw, 1.7rem);
-			margin-bottom: 0.2rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			margin-bottom: 1rem;
 		}
 
-		p{
-			font-size: clamp(1.3rem, 2vw, 1.7rem);
-			line-height: 1.5;
-			text-align: justify;
-            text-indent: 1.3rem;
-			padding: 0.5rem;
-			margin: 0;
-		}
-
-        .obs{
-            background-color: dimgray;
+		.obs{
+            background-color: grey;
             color: #fff;
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
 			line-height: 1.5;
 			text-align: justify;
-            text-indent: 0;
-			padding: 0.5rem;
-			margin: 0;
+            text-indent: 0;			
+			margin: 1rem 0;
+            padding: 1rem;            
             border-radius: 0.8rem;            
+        }       
+
+        div > ol{
+            margin: 0;
         }
 
-        h3.obs{
-            text-align: left;            
-            margin: 0.5rem;
+        p{
+            margin: 1rem;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
         }
-     
+
+        ul{            
+            margin: 0 0 0 4rem;          
+        }
+
         li{
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+            margin: 0;
+            padding: 0;
+        }
+
+        span{
+            background-color: #000;
+            color: #fff;
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
 			line-height: 1.5;
-			text-align: left;
-            text-indent: 0;
-			padding: 0.5rem;
-			margin-left: 8rem;
+            margin-top: 0;
+            padding: 0.5rem;
+            border-radius: 0.8rem;   
+        }
+
+        code{            
+            font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+        }
+
+        a{
+			margin: 1rem 0.5rem;
+			font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+			color: darkgoldenrod;
+			text-decoration: none;    
+		}    
+	
+		a:hover{
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+
+        #codigo{
+            margin: 1rem 10rem;            
+            padding: 0;            
         }
 	</style>
 </head>
 <body>
-    <h1>Atividade da plataforma sobre senhas mais seguras</h1>
+    <h1>Bancos de Dados - Módulo II</h1>    
+    <h3 class="obs">Atividade da plataforma sobre senhas mais seguras</h3>
+    
     <p>No ano de 2022, diversas empresas sofreram tentativas de ataques cibernéticos que poderiam impactar diretamente a segurança dos dados. Portanto, é recomendado que funcionários e clientes de lojas virtuais sempre mantenham suas senhas de acesso atualizadas, alterando-as a cada três meses. Pensando nisso, cite pelo menos três métodos para melhorar essas senhas, com foco em fortalecê-las.</p>
+    
  
     <h3 class="obs">Evitar o uso de senhas comuns e óbvias</h3>
       
@@ -115,8 +154,10 @@
     <p>
         Os pontos anteriores demonstraram o que não deve ser feito para criação de senhas.
         Alguns cuidados podem aumentar a segurança destas:
-        <li>Senhas mais longas são mais difíceis de serem quebradas;</li>
-        <li>Senhas maiores e que misturem letras maiúsculas, minúsculas, números e caracteres especiais, tornarão sua quebra consideravelmente mais complicada.</li>
+        <ul>
+            <li>Senhas mais longas são mais difíceis de serem quebradas;</li>
+            <li>Senhas maiores e que misturem letras maiúsculas, minúsculas, números e caracteres especiais, tornarão sua quebra consideravelmente mais complicada.</li>
+        </ul>
     </p>
 
     <h3 class="obs">Considerar o uso de um gerenciador de senhas</h3>

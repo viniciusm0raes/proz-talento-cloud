@@ -22,8 +22,13 @@
 
 [7. Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade7/)
 
-[8. Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um trigger que se relacione com algum comando, como insert, select, delete ou update](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade8/index.html)
+[8. Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um gatilho (TRIGGER) que se relacione com algum comando, como insert, select, delete ou update](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade8/index.html)
 
-[9. Criar um procedure que faça um levantamento diário da quantidade de produtos comprados por dia](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade9/index.html)
+[9. Criar um procedimento (PROCEDURE) que faça um levantamento diário da quantidade de produtos comprados por dia](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade9/index.html)
 
-#### Continuar incluindo cada atividade da plataforma...
+[10. Criar uma função (FUNCTION) para somar todos os clientes que foram cadastrados na loja durante um dia](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade10/index.html)
+
+[11.  Explicar os pilares da segurança de dados que devem ser seguidos para que o novo banco seja bem projetado e funcione corretamente](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade11/index.html)
+
+[12.  Apresentar pelo menos três métodos para melhorar essas senhas, com foco em fortalecê-las](https://viniciusm0raes.github.io/proz-talento-cloud/aulas-BancosdeDados/atividade12/index.html)
+
