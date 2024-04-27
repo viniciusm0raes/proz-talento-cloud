@@ -1,5 +1,8 @@
 Exemplo de TemplateStrings numa função:
 
+Site sugerido na atividade para testar o código:
+https://onecompiler.com/javascript/
+
 function operacoes(v1, v2){
   return (`${v1} + ${v2} = ${v1+v2}
   \n${v1} - ${v2} = ${v1-v2}
