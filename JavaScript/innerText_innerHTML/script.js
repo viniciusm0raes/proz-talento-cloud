@@ -19,7 +19,7 @@ let titulo = document.getElementById("titulo");
 
 let link = document.querySelector("a");
 
-titulo.innerText = "\"Mantras\" com innerText"
+titulo.innerText = "\"Mantras\" com innerText e innerHTML"
 
 link.innerText = "https://prozeducacao.com.br"
 
@@ -28,7 +28,7 @@ console.log(todos);
 
 for(let i = 0; i < listaLinks.length; i++){
     let itens = document.createElement("li")    
-    itens.innerHTML = `<a href="${listaLinks[i].site}"+ '" target = "_blank">${listaLinks[i].banda}</a>`
+    itens.innerHTML = `<a href="${listaLinks[i].site}"+ '" target = "_blank" rel="noopener noreferrer">${listaLinks[i].banda}</a>`
     
 
     let bandas = document.getElementById("naOrdem")
