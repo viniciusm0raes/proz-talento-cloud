@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3em;
+}
+
+h1, button{
+    margin: 1px 13px;
+    padding: 0;
+}
