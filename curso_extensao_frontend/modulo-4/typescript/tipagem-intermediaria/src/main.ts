@@ -50,7 +50,7 @@ let alunos: AlunoType[] = [
 //Tipagem de Funções
 function retornarPrimeiro(lista: AlunoType[]): string {
 	const primeiro = lista[0]
-	return `O(a) aluno(a) ${primeiro.nome} tem a matrícula de número ${primeiro.matricula}.`
+	return `O(a) aluno(a) ${primeiro.matricula} tem a matrícula de número ${primeiro.matricula}.`
 };
 
 console.log(retornarPrimeiro);
@@ -66,7 +66,7 @@ let produtos: ProdutoType[] = [
 ];
 
 function apresentarProduto(produtos: ProdutoType): string{
-	return `O produto ${produtos.nome} custa R$${produtos.preco}.`
+	return `O produto ${apresentarProduto.nome} custa R$${apresentarProduto.preco}.`
 };
 
 console.log(apresentarProduto)

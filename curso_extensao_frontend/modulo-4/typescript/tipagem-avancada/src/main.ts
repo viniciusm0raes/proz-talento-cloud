@@ -52,7 +52,41 @@ let filmeMaisRecente: ResumoLista<Filme> = {
 	lista: listaFilmes
 }
 
-console.log(filmeMaisRecente.ultimo.titulo)
-console.log(filmeMaisRecente.ultimo.genero)
+console.log(`O título do último filme adicionado é: ${filmeMaisRecente.ultimo.titulo}.`)
+console.log(`O gênero do último filme adicionado é: ${filmeMaisRecente.ultimo.genero}.`)
 console.log(filmeMaisRecente.lista)
-console.log(filmeMaisRecente.total)
+console.log(`No total, foram cadastrados ${filmeMaisRecente.total} filmes.`)
+
+
+//Genéricos com Funções
+
+//Ao definir um tipo genérico na função abaixo e fazermos a relação do array resultante, também com o tipo genérico, o TypeScript identificará o tipo aplicado para cada lista e definirá este mesmo tipo para o resultado de cada uma destas.
+
+function primeiroElemento<T>(lista: T[]): T{
+	return lista[0]
+};
+
+let lista2Numeros = [1, 2, 3, 4, 5];
+let lista2Nomes = ['Maria', 'Vinícius'];
+
+type Produto = {
+	nome: string,
+	preco: number
+};
+
+let lista2Produtos: Produto[] = [
+	{nome: 'pão', preco: 0.70},
+	{nome: 'leite', preco: 5.50}
+];
+
+let resultadoNumeros = primeiroElemento(lista2Numeros);
+let resultadoNomes = primeiroElemento(lista2Nomes);
+let resultadoProdutos = primeiroElemento(lista2Produtos);
+
+console.log(resultadoNumeros);
+console.log(resultadoNomes);
+console.log(resultadoProdutos);
+
+//Genéricos capturando elementos no DOM
+const inputNome = document.querySelector<HTMLInputElement>('#nome');
+console.log(inputNome)
