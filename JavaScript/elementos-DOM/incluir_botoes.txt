@@ -1,6 +1,0 @@
-Manipular estilos e classes com JS (terceiro vídeo)
-btn-subtrair
-quantidade-produto
-btn-adicionar
-
-subtotal
