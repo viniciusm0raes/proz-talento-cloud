@@ -1,6 +1,6 @@
 ## Tipos de dados SQL Server
 
-Tipo         	  | Armazenamento   					| Descrição
+**Tipo**         	  | **Armazenamento**   					| **Descrição**
 ---          	  | ---                                 | ---
 **char(n)**       | n (o número de caracteres desejado) | String de caracteres detamanho **fixo**, máximo de 8.000 caracteres. 
 **varchar(n)**    |                                     | String de caracteres de tamanho **variável**, máximo de 8.000 caracteres.
