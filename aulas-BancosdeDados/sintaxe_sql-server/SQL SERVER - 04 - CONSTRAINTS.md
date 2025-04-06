@@ -1,4 +1,4 @@
-# SQL Constraints (restrições)
+## SQL Server - Constraints (restrições)
 - Restrições são regras aplicadas nas colunas de uma tabela
 - São usadas para limitar os tipos de dados que são inseridos
 - Podem ser especificadas no momento de criação da tabela (CREATE) ou após a tabela ter sido criada (ALTER)
@@ -24,9 +24,9 @@
 ##### FOREIGN KEY
 - Uma FOREIGN KEY (Chave Estrangeira) em uma tabela é um campo que aponta para uma chave primária **em outra tabela**.
 
-		CONSTRAINT fk_ID_Autor FOREIGN KEY (ID_Autor) REFERENCES tb_autores (ID_Autor)
+		CONSTRAINT fk_id_autor FOREIGN KEY (id_autor) REFERENCES tb_autores (id_autor)
 
-Neste exemplo a chave primária está na tabela tb_autores e uma chave estrangeira de nome ID_Autor foi criada na tabela atual, usando o nome fk_ID_Autor.
+Neste exemplo a chave primária está na tabela tb_autores e uma chave estrangeira de nome id_autor foi criada na tabela atual, usando o nome fk_id_autor.
 
 ##### CHECK
 - A constraint CHECK é usada para limitar uma faixa de valores que podem ser colocados em uma coluna.
@@ -37,4 +37,4 @@ Neste exemplo a chave primária está na tabela tb_autores e uma chave estrangei
 - A constraint DEFAULT é usada para inserir um **valor padrão** em uma coluna.
 - O valor padrão será adicionado a todos os novos registros, **caso nenhum outro valor** seja especificado.
 
-[**Fonte**: Bóson Treinamentos](https://www.youtube.com/watch?v=5aqggaHTMSc)
+[**Fonte**: Bóson Treinamentos](https://youtube.com/playlist?list=PLucm8g_ezqNqI5cW3alteV5olcMCcHYRK&si=iTJ-F9uZb8Eff3QA)

@@ -1,6 +1,6 @@
-## Tipos de dados SQL Server
+## SQL Server - Tipos de dados
 
-**Tipo**         	  | **Armazenamento**   					| **Descrição**
+Tipo         	  | Armazenamento   					| Descrição
 ---          	  | ---                                 | ---
 **char(n)**       | n (o número de caracteres desejado) | String de caracteres detamanho **fixo**, máximo de 8.000 caracteres. 
 **varchar(n)**    |                                     | String de caracteres de tamanho **variável**, máximo de 8.000 caracteres.
@@ -19,3 +19,5 @@
 **text**          |                                     | Cadeia de caracteres de tamanho **variável**. Até 2Gb de dados.
 **money**         | 8 bytes                             | Dados monetários de -922.337.203.685.477.5808 até 922.337.203.685.477.5807.
 ****
+
+[**Fonte**: Bóson Treinamentos](https://youtube.com/playlist?list=PLucm8g_ezqNqI5cW3alteV5olcMCcHYRK&si=iTJ-F9uZb8Eff3QA)
