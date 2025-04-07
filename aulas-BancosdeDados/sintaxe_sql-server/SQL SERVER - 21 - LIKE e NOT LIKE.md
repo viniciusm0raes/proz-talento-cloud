@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - LIKE e NOT LIKE - Filtrar por padrões específicos
+### SQL Server [T-SQL (Transact-SQL)] - LIKE e NOT LIKE - Filtrar por padrões específicos
 
 * Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.
 * Um padrão pode incluir caracteres normais e curingas.

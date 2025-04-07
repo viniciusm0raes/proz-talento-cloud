@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - OUTER JOINS - LEFT e RIGHT - Selecionar dados de várias tabelas
+### SQL Server [T-SQL (Transact-SQL)] - OUTER JOINS - LEFT e RIGHT - Selecionar dados de várias tabelas
 
 * OUTER JOINS: Utilizados quando se deseja retorno de registros, mesmo quando NÃO haja correspondência exata entre as tabelas selecionadas.
 * LEFT JOIN: Retorna todas as linhas da tabela à esquerda, mesmo se NÃO houver nenhuma correspondência na tabela à direita. É a interseção de dados, somada com todos os dados da tabela à esquerda que NÃO estão relacionados.

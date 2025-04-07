@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - WHERE - Filtrando registros em uma consulta
+### SQL Server [T-SQL (Transact-SQL)] - WHERE - Filtrando registros em uma consulta
 
 * A cláusula WHERE permite filtrar registros em uma consulta.
 

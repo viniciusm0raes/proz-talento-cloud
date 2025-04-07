@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - Criação de banco de dados
+### SQL Server [T-SQL (Transact-SQL)] - Criação de banco de dados
 
 #### Sintaxe Simplificada
 

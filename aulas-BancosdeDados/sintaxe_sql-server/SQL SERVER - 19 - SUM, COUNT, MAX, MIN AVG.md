@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - Funções Agregadas - MIN, MAX, AVG, SUM , COUNT
+### SQL Server [T-SQL (Transact-SQL)] - Funções Agregadas - MIN, MAX, AVG, SUM , COUNT
 
 * MIN = Valor mínimo
 * MAX = Valor máximo

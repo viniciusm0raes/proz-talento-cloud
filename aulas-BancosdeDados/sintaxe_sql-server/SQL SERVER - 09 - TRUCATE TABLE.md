@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - TRUNCATE TABLE - Excluindo dados, sem excluir uma tabela
+### SQL Server [T-SQL (Transact-SQL)] - TRUNCATE TABLE - Excluindo dados, sem excluir uma tabela
 
 * Remove todas as linhas de uma tabela sem registrar as exclusões de linhas individuais.
 * TRUNCATE TABLE é como a instrução DELETE sem usar a cláusula WHERE.

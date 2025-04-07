@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - SELECT FROM - Consultas simples em uma tabela
+### SQL Server [T-SQL (Transact-SQL)] - SELECT FROM - Consultas simples em uma tabela
 
 ##### Sintaxe
 ---

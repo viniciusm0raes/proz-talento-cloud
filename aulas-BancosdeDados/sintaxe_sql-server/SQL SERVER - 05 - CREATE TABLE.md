@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - Criação de tabelas
+### SQL Server [T-SQL (Transact-SQL)] - Criação de tabelas
 
 ##### Sintaxe
 

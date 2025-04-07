@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - Tipos de dados SQL Server
+### SQL Server [T-SQL (Transact-SQL)] - Tipos de dados SQL Server
 
 
 |     |     |     |     |     |

@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - JOINS e INNER JOIN - Selecionar dados de duas ou mais tabelas
+### SQL Server [T-SQL (Transact-SQL)] - JOINS e INNER JOIN - Selecionar dados de duas ou mais tabelas
 
 * A palavra-chave JOIN é usada para obter dados provenientes de duas ou mais tabelas, baseado em um relacionamento entre colunas nestas tabelas.
 

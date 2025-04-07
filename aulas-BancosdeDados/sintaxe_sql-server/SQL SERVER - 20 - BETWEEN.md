@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - BETWEEN - Seleção de Intervalos em Registros
+### SQL Server [T-SQL (Transact-SQL)] - BETWEEN - Seleção de Intervalos em Registros
 
 ##### Sintaxe
 ---

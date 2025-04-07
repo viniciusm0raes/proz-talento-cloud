@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - Constraints (restrições)
+### SQL Server [T-SQL (Transact-SQL)] - Constraints (restrições)
 - Restrições são regras aplicadas nas colunas de uma tabela
 - São usadas para limitar os tipos de dados que são inseridos
 - Podem ser especificadas no momento de criação da tabela (CREATE) ou após a tabela ter sido criada (ALTER)

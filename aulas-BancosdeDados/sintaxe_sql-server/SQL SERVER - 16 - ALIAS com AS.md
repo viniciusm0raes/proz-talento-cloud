@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - ALIAS - Nomes alternativos para colunas ou tabelas
+### SQL Server [T-SQL (Transact-SQL)] - ALIAS - Nomes alternativos para colunas ou tabelas
 
 * Utilizado para retornar nomes alternativos para uma coluna ou tabela em uma consulta.
 

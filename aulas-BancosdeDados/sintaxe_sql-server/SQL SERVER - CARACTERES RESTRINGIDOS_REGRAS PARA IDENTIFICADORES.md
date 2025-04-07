@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - Palavras reservadas e alguns caracteres especiais são restringidos em nomes de objetos e identificadores. 
+### SQL Server [T-SQL (Transact-SQL)] - Palavras reservadas e alguns caracteres especiais são restringidos em nomes de objetos e identificadores. 
 
 #### Caracteres especiais restringidos
 Os nomes de objetos não podem conter os seguintes caracteres especiais:

@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - ORDER BY - Ordenar dados
+### SQL Server [T-SQL (Transact-SQL)] - ORDER BY - Ordenar dados
 
 * A palavra-chave ORDER BY é usada para ordenar o conjunto-resultado de registros.
 * ASC - Ordem ascendente (é a ordem padrão e não precisa ser declarada)

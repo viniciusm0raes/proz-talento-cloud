@@ -1,4 +1,4 @@
-#### SQL Server [T-SQL (Transact-SQL)] - FULL OUTER JOIN - Selecionar dados de várias tabelas
+### SQL Server [T-SQL (Transact-SQL)] - FULL (OUTER) JOIN - Selecionar dados de várias tabelas
 
 * FULL JOIN: Combinação de RIGHT JOIN com LEFT JOIN. Traz os dados de interseção entre as tabelas, além daqueles que não possuam correspondência entre as mesmas. Em outras palavras, traz TODOS os dados das tabelas citadas.
 
