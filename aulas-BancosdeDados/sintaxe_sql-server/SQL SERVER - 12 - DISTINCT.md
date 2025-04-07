@@ -1,4 +1,4 @@
-#### SQL Server - DISTINCT - Consultas com valores distintos, sem repetição
+#### SQL Server [T-SQL (Transact-SQL)] - DISTINCT - Consultas com valores distintos, sem repetição
 
 * Algumas colunas podem conter valores duplicados. Para exibir apenas valores diferentes ("distintos"), usa-se a palavra-chave DISTINCT.
 

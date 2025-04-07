@@ -1,4 +1,4 @@
-#### SQL Server - UNION - Operador para combinação de resultados
+#### SQL Server [T-SQL (Transact-SQL)] - UNION - Operador para combinação de resultados
 
 * O operador UNION permite combinar duas ou mais declarações SELECT.
 * Cada declaração SELECT deve ter o mesmo número de colunas, tipos de dados e ordem de colunas.

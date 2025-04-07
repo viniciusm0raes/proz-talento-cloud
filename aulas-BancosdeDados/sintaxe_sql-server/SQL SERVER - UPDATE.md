@@ -1,4 +1,4 @@
-#### SQL Server - UPDATE - Atualização de registros numa tabela
+#### SQL Server [T-SQL (Transact-SQL)] - UPDATE - Atualização de registros numa tabela
 
 ##### Sintaxe
 ---

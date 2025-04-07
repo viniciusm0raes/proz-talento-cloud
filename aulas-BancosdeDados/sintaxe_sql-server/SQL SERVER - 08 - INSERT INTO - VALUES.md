@@ -1,4 +1,4 @@
-#### SQL Server - Inserir dados nas Tabelas
+#### SQL Server [T-SQL (Transact-SQL)] - Inserir dados nas Tabelas
 
 ##### Sintaxe
 	INSERT INTO nome_tabela (coluna1, coluna2, ...)

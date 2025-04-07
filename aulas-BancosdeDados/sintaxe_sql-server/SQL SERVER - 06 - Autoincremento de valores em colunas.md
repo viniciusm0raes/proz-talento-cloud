@@ -1,4 +1,4 @@
-## SQL Server - IDENTITY - Auto incremento de valores em colunas
+#### SQL Server [T-SQL (Transact-SQL)] - IDENTITY - Auto incremento de valores em colunas
 
 * O Autoincremento permite que um número única seja gerado quando um novo registro é inserido em uma tabela.
 * Em SQL Server, trata-se da palavra-chave reservada IDENTITY, cujo valor inicial **padrão** é 1 e também seu incremento **padrão** de 1.

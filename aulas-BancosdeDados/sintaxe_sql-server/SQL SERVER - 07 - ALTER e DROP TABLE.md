@@ -1,4 +1,4 @@
-#### SQL Server - Alteração ou Exclusão de tabelas e colunas ou restrições (CONSTRAINTS)
+#### SQL Server [T-SQL (Transact-SQL)] - Alteração ou Exclusão de tabelas e colunas ou restrições (CONSTRAINTS)
 
 É possível alterar a estrutura de uma tabela após sua criação, acrescentando ou excluindo atributos (campos) ou mesmo restrições (CONSTRAINTS).
 

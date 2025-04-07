@@ -1,6 +1,8 @@
-#### SQL Server - Criação de tabelas
+#### SQL Server [T-SQL (Transact-SQL)] - Criação de tabelas
 
-        USE db_Biblioteca
+##### Sintaxe
+
+        USE db_Biblioteca --Seleciona o banco de dados que será usado
 
         CREATE TABLE tb_livro
         (	

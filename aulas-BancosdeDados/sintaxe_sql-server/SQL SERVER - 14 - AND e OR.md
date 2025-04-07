@@ -1,4 +1,4 @@
-#### SQL Server - AND e OR - Operadores Lógicos
+#### SQL Server [T-SQL (Transact-SQL)] - AND e OR - Operadores Lógicos
 
 * AND e OR são operadores usados para filtrar registros baseados em mais de uma condição.
 * O operador AND mostra um registro se ambas / todas as condições forem verdadeiras.

@@ -1,10 +1,12 @@
+#### SQL Server [T-SQL (Transact-SQL)] - Criação de banco de dados
+
 #### Sintaxe Simplificada
 
-        CREATE DATABASE db_teste01;
+        CREATE DATABASE nome_banco_de_dados;
 
 ---
 
-#### Sintaxe Extendida
+#### Sintaxe Extendida (exemplo)
         CREATE DATABASE db_teste02 ON PRIMARY
         (NAME = teste02,
         FILENAME = 'C:\SQL\teste02.mdf', --Atentar para a extenção do nome de arquivos de banco de dados primários (.mdf).
@@ -35,26 +37,26 @@
 ---
 
 #### Determinar qual banco será usado
-        USE teste01;
+        USE nome_banco_de_dados;
 
 ---
 
 #### Obter informações detalhadas de um banco de dados específico
-        EXEC sp_helpdb teste01;
+        EXEC sp_helpdb nome_banco_de_dados;
 
 ---
 
 #### Excluir um banco de dados, se ele existir
-        DROP DATABASE IF EXISTS teste02; --Comando para um banco que NÃO está em uso
+        DROP DATABASE IF EXISTS nome_banco_de_dados; --Comando para um banco que NÃO está em uso
 
 ---
 
 #### Excluir banco EM uso
         USE MASTER --Muda o banco em uso para o MASTER
         GO
-        ALTER DATABASE teste01
+        ALTER DATABASE nome_banco_de_dados
         SET SINGLE_USER WITH ROLLBACK IMMEDIATE --Desconecta o banco imediatamente
-        DROP DATABASE teste01;
+        DROP DATABASE nome_banco_de_dados;
 
 ---
 

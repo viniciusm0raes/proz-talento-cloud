@@ -1,4 +1,4 @@
-#### SQL Server - SELECT INTO - Criar nova tabela a partir de uma tabela existente
+#### SQL Server [T-SQL (Transact-SQL)] - SELECT INTO - Criar nova tabela a partir de uma tabela existente
 
 * Seleciona dados de uma ou mais tabela e os insere em uma tabela diferente.
 * Pode ser usada para criar cópias de backup de tabelas.

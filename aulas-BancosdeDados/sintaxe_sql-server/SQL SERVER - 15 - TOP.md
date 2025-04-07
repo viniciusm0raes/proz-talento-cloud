@@ -1,4 +1,4 @@
-#### SQL Server - TOP - Especificar número de registros a retornar
+#### SQL Server [T-SQL (Transact-SQL)] - TOP - Especificar número de registros a retornar
 
 * Utilizado para especificar o número de registros que devem retornar na consulta de uma tabela.
 
