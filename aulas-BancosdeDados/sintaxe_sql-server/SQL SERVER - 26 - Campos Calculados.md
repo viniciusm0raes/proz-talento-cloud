@@ -6,37 +6,37 @@
 --- 
 #### Sintaxe
 
-CREATE TABLE nome_tabela (
-	nome_campo_id SMALLINT IDENTITY,
-	nome_campo_produto VARCHAR(20),
-	nome_campo_preco MONEY,
-	nome_campo_quant SMALLINT,
-	nome_campo_total AS (nome_campo_preco * nome_campo_quant)
-);
+	CREATE TABLE nome_tabela (
+		nome_campo_id SMALLINT IDENTITY,
+		nome_campo_produto VARCHAR(20),
+		nome_campo_preco MONEY,
+		nome_campo_quant SMALLINT,
+		nome_campo_total AS (nome_campo_preco * nome_campo_quant)
+	);
 
 ---
 Exemplo:
 
-CREATE TABLE tb_produtos (
-	codproduto SMALLINT IDENTITY,
-	nomeproduto VARCHAR(20),
-	preco MONEY,
-	quant SMALLINT,
-	total AS (preco * quant)
-);
+	CREATE TABLE tb_produtos (
+		codproduto SMALLINT IDENTITY,
+		nomeproduto VARCHAR(20),
+		preco MONEY,
+		quant SMALLINT,
+		total AS (preco * quant)
+	);
 
-INSERT INTO tb_produtos
-VALUES
-	('Mouse',13.00,2),
-	('Teclado',25.00,2),
-	('Fones',25.00,1),
-	('Pendrive',28.00,3),
-	('SD Card',35.00,2),
-	('DVD-R',1.35,12);
-	
-SELECT * FROM tb_produtos; -- O campo total já virá calculado conforme indicado na criação da tabela.
+	INSERT INTO tb_produtos
+	VALUES
+		('Mouse',13.00,2),
+		('Teclado',25.00,2),
+		('Fones',25.00,1),
+		('Pendrive',28.00,3),
+		('SD Card',35.00,2),
+		('DVD-R',1.35,12);
+		
+	SELECT * FROM tb_produtos; -- O campo total já virá calculado conforme indicado na criação da tabela.
 
-SELECT SUM(total) FROM tb_produtos; -- Calculará a soma de todos os produtos.
+	SELECT SUM(total) FROM tb_produtos; -- Calculará a soma de todos os produtos.
 	
 ---
 
