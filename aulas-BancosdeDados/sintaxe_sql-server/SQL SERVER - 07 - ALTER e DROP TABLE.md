@@ -31,7 +31,7 @@ Alteração de uma coluna. É preferível que essa alteração seja feita antes 
 	ALTER COLUMN id_autor INT;
 
 ---
-Inserção de uma PRIMARY KEY (PK) em uma tabela que ainda não a possua. Para que essa alteração seja efetivada, a coluna citada precisa já existir na tabela citada.
+Inserção de uma PRIMARY KEY (PK) em uma tabela que ainda não a possua. Para que essa alteração seja efetivada, a coluna citada precisa **já existir** na tabela.
 
 	ALTER TABLE tb_clientes
 	ADD PRIMARY KEY (id_cliente);
