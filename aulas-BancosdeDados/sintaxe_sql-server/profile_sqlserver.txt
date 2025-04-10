@@ -1,2 +1,0 @@
-PROFILE sql server
-tabelas temporárias

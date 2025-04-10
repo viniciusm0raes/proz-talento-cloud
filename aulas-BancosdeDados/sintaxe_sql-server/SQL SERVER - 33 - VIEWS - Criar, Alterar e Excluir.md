@@ -31,7 +31,7 @@ Exemplo1:
 	WHERE Livro LIKE 'S%';
 	
 ---
-Exemplo de criação de uma VIEW:
+Exemplo de uso de uma VIEW:
 
     SELECT Livro, Autor
 	FROM vw_livro_autores
