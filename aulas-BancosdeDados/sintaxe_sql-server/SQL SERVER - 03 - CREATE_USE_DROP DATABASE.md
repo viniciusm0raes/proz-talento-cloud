@@ -20,7 +20,7 @@
         SIZE = 1MB,
         FILEGROWTH = 1MB --Não precisa necessariamente ser em porcentagem
         )
-        GO --o uso do GO dispensa o ; no final
+        GO --o uso do GO indica o final de um lote de instruções Transact-SQL. Todas as instruções inseridas desde o **último** GO são enviadas ao SQL Server como um único lote.
 
 ---
 
