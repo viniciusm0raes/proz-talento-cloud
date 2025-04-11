@@ -12,7 +12,7 @@
 	AS Subconsulta;
 	
 ---
-Exemplo utilizando um exemplo de base de dados que registra diferentes compras de uma **mesmo cliente**:
+Exemplo utilizando uma de base de dados que registra diferentes compras de uma **mesmo cliente**:
 
 	SELECT resultado.cliente as Cliente, SUM(resultado.total) AS Total
 	FROM
