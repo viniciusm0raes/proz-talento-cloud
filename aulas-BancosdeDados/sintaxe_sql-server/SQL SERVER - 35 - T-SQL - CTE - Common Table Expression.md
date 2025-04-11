@@ -3,16 +3,10 @@
 * CTE - Common Table Expression - Expressão de Tabela Comum.
 * Variação sintática de uma subconsulta, similar a uma view (exibição).
 * Pode ser acessada **múltiplas vezes** dentro da consulta principal, como se fosse uma exibição ou tabela.
-* Na construção do código, o CTE **deve ser criado antes** da consulta principal. Isso o difere da subconsulta, pois nesta, a consulta principal é construída antes da subconsulta.
+* Na construção do código, a CTE **deve ser criada antes** da consulta principal.
 
 --- 
 #### Sintaxe
-
-	SELECT (SELECT nome-tabela.nome-coluna)
-	AS Subconsulta;
-	
----
-Exemplo utilizando uma de base de dados que registra diferentes compras de uma **mesmo cliente**:
 
 	-- CTE em si
 	WITH nome-cte (coluna_1, coluna_2) -- Exemplos com duas, mas mais colunas, se necessário, podem ser declaradas.
@@ -28,6 +22,25 @@ Exemplo utilizando uma de base de dados que registra diferentes compras de uma *
 	SELECT coluna1, SUM(Total) AS Valor_Total
 	FROM nome-cte
 	GROUP BY coluna1
+	ORDER BY Valor_Total DESC;
+	
+---
+Exemplo utilizando uma de base de dados que registra diferentes compras de uma **mesmo cliente**:
+
+    -- CTE em si
+	WITH ConsultaCTE (Cliente, Total)
+	AS (SELECT CL.Nome_Cliente AS Cliente,
+	(PR.Preco_Produto * CO.Quantidade) AS Total
+	FROM Clientes AS CL
+	INNER JOIN TBL_Compras as CO
+	ON CL.ID_Cliente = CO.ID_Cliente
+	INNER JOIN Produtos AS PR
+	ON CO.ID_Produto = PR.ID_Produto)
+	
+	-- Subconsulta
+	SELECT Cliente, SUM(Total) AS Valor_Total
+	FROM ConsultaCTE
+	GROUP BY Cliente
 	ORDER BY Valor_Total DESC;
 
 ---
